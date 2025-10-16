@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="1200" height="720" viewBox="0 0 1200 720">
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="1400" height="900" viewBox="0 0 1400 900">
   <defs>
     <style type="text/css"><![CDATA[
       .box { fill: #f7f7f9; stroke: #2e3a46; stroke-width: 2; rx: 10; ry: 10; }
@@ -22,7 +22,7 @@
   </defs>
 
   <!-- Title -->
-  <text x="600" y="40" text-anchor="middle" class="title">Live System Overview — Mac + XR18 + Ultranet P16‑M</text>
+  <text x="700" y="50" text-anchor="middle" class="title">Live System Overview — Mac + XR18 + Ultranet P16‑M</text>
 
   <!-- Mac Laptop -->
   <rect x="60" y="120" width="240" height="120" class="box" />
@@ -31,85 +31,85 @@
   <text x="80" y="198" class="text">Logic Pro (prep)</text>
 
   <!-- XR18 -->
-  <rect x="360" y="110" width="280" height="140" class="box" />
-  <text x="380" y="140" class="title">Behringer X Air XR18</text>
-  <text x="380" y="165" class="text">FOH mixer + USB interface</text>
-  <text x="380" y="188" class="text">Ultranet (RJ45) out</text>
+  <rect x="440" y="130" width="300" height="150" class="box" />
+  <text x="460" y="160" class="title">Behringer X Air XR18</text>
+  <text x="460" y="186" class="text">FOH mixer + USB interface</text>
+  <text x="460" y="210" class="text">Ultranet (RJ45) out</text>
 
   <!-- FOH/PA -->
-  <rect x="780" y="80" width="260" height="90" class="box" />
-  <text x="800" y="110" class="title">FOH / PA</text>
-  <text x="800" y="135" class="text">Main L/R from XR18</text>
+  <rect x="900" y="80" width="280" height="90" class="box" />
+  <text x="920" y="110" class="title">FOH / PA</text>
+  <text x="920" y="135" class="text">Main L/R from XR18</text>
 
   <!-- Ultranet Hub -->
-  <rect x="760" y="270" width="300" height="90" class="box" />
-  <text x="780" y="300" class="title">Ultranet Hub (P16‑D)</text>
-  <text x="780" y="325" class="text">Power + distribution to P16‑M</text>
+  <rect x="900" y="280" width="300" height="100" class="box" />
+  <text x="920" y="312" class="title">Ultranet Hub (P16‑D)</text>
+  <text x="920" y="338" class="text">Power + distribution to P16‑M</text>
 
   <!-- P16-M units -->
-  <rect x="820" y="410" width="220" height="50" class="box" />
-  <text x="830" y="440" class="label">P16‑M Drummer</text>
+  <rect x="960" y="420" width="240" height="54" class="box" />
+  <text x="972" y="452" class="label">P16‑M Drummer</text>
 
-  <rect x="820" y="475" width="220" height="50" class="box" />
-  <text x="830" y="505" class="label">P16‑M Bassist</text>
+  <rect x="960" y="486" width="240" height="54" class="box" />
+  <text x="972" y="518" class="label">P16‑M Bassist</text>
 
-  <rect x="820" y="540" width="220" height="50" class="box" />
-  <text x="830" y="570" class="label">P16‑M Guitarist</text>
+  <rect x="960" y="552" width="240" height="54" class="box" />
+  <text x="972" y="584" class="label">P16‑M Guitarist</text>
 
-  <rect x="820" y="605" width="220" height="50" class="box" />
-  <text x="830" y="635" class="label">P16‑M Lead Vox / BGV</text>
+  <rect x="960" y="618" width="240" height="54" class="box" />
+  <text x="972" y="650" class="label">P16‑M Lead Vox / BGV</text>
 
   <!-- Example IEM transmitter from P16-M Line Out -->
-  <rect x="1060" y="410" width="120" height="50" class="box" />
-  <text x="1070" y="440" class="label">IEM TX (example)</text>
-  <line x1="1040" y1="435" x2="1060" y2="435" class="analog" marker-end="url(#arrowGreen)" />
-  <text x="1045" y="425" class="label" fill="#2e7d32">Line Out L/R</text>
+  <rect x="1220" y="420" width="130" height="54" class="box" />
+  <text x="1232" y="452" class="label">IEM TX (example)</text>
+  <polyline points="1200,447 1210,447 1220,447" class="analog" marker-end="url(#arrowGreen)" />
+  <text x="1200" y="435" class="label" fill="#2e7d32">Line Out L/R</text>
 
   <!-- Analog sources block -->
-  <rect x="60" y="300" width="260" height="120" class="box" />
-  <text x="80" y="330" class="title">Live Inputs 1–12</text>
-  <text x="80" y="355" class="text">Mics, DIs, instruments</text>
-  <text x="80" y="378" class="text">(Kick, Snare, Toms, OH, Bass DI, Guitar, Vox)</text>
+  <rect x="60" y="340" width="280" height="140" class="box" />
+  <text x="80" y="370" class="title">Live Inputs 1–12</text>
+  <text x="80" y="396" class="text">Mics, DIs, instruments</text>
+  <text x="80" y="420" class="text">(Kick, Snare, Toms, OH, Bass DI, Guitar, Vox)</text>
 
   <!-- Connections -->
   <!-- USB from Mac to XR18 -->
-  <line x1="300" y1="180" x2="360" y2="180" class="usb" marker-end="url(#arrowBlue)" />
-  <text x="260" y="160" class="label" fill="#1f78d1">USB (Audio 1–18)</text>
+  <line x1="300" y1="190" x2="440" y2="190" class="usb" marker-end="url(#arrowBlue)" />
+  <text x="280" y="160" class="label" fill="#1f78d1">USB (Audio 1–18)</text>
 
   <!-- Analog from sources to XR18 (routed up and in) -->
-  <polyline points="320,360 320,220 360,220" class="analog" marker-end="url(#arrowGreen)" />
-  <text x="250" y="215" class="label" fill="#2e7d32">Analog Inputs 1–12</text>
+  <polyline points="340,410 340,250 440,250" class="analog" marker-end="url(#arrowGreen)" />
+  <text x="250" y="245" class="label" fill="#2e7d32">Analog Inputs 1–12</text>
 
   <!-- Mains from XR18 to FOH/PA (slightly above text) -->
-  <polyline points="640,140 710,140 780,120" class="analog" marker-end="url(#arrowGreen)" />
-  <text x="690" y="112" class="label" fill="#2e7d32">Main L/R</text>
+  <polyline points="740,150 820,150 900,120" class="analog" marker-end="url(#arrowGreen)" />
+  <text x="800" y="100" class="label" fill="#2e7d32">Main L/R</text>
 
   <!-- Ultranet from XR18 to P16-D -->
-  <line x1="640" y1="220" x2="760" y2="290" class="ultranet" marker-end="url(#arrowOrange)" />
-  <text x="670" y="250" class="label" fill="#f57c00">Ultranet (16 ch)</text>
+  <polyline points="740,210 860,210 860,330 900,330" class="ultranet" marker-end="url(#arrowOrange)" />
+  <text x="780" y="200" class="label" fill="#f57c00">Ultranet (16 ch)</text>
 
   <!-- Hub to P16-M fanout -->
-  <line x1="910" y1="360" x2="910" y2="410" class="ultranet" marker-end="url(#arrowOrange)" />
-  <line x1="910" y1="360" x2="910" y2="475" class="ultranet" marker-end="url(#arrowOrange)" />
-  <line x1="910" y1="360" x2="910" y2="540" class="ultranet" marker-end="url(#arrowOrange)" />
-  <line x1="910" y1="360" x2="910" y2="605" class="ultranet" marker-end="url(#arrowOrange)" />
+  <polyline points="1050,380 1050,420 1080,420" class="ultranet" marker-end="url(#arrowOrange)" />
+  <polyline points="1050,380 1050,486 1080,486" class="ultranet" marker-end="url(#arrowOrange)" />
+  <polyline points="1050,380 1050,552 1080,552" class="ultranet" marker-end="url(#arrowOrange)" />
+  <polyline points="1050,380 1050,618 1080,618" class="ultranet" marker-end="url(#arrowOrange)" />
 
   <!-- Legend -->
-  <rect x="60" y="40" width="280" height="60" class="box" />
-  <text x="75" y="65" class="label">Legend</text>
-  <line x1="140" y1="60" x2="180" y2="60" class="usb"/>
-  <text x="190" y="65" class="text">USB (Digital)</text>
-  <line x1="140" y1="80" x2="180" y2="80" class="analog"/>
-  <text x="190" y="85" class="text">Analog Audio</text>
-  <line x1="140" y1="100" x2="180" y2="100" class="ultranet"/>
-  <text x="190" y="105" class="text">Ultranet</text>
+  <rect x="60" y="60" width="300" height="70" class="box" />
+  <text x="75" y="88" class="label">Legend</text>
+  <line x1="140" y1="80" x2="190" y2="80" class="usb"/>
+  <text x="200" y="85" class="text">USB (Digital)</text>
+  <line x1="140" y1="100" x2="190" y2="100" class="analog"/>
+  <text x="200" y="105" class="text">Analog Audio</text>
+  <line x1="140" y1="120" x2="190" y2="120" class="ultranet"/>
+  <text x="200" y="125" class="text">Ultranet</text>
 
   <!-- Notes block -->
-  <rect x="360" y="300" width="360" height="140" class="box" />
-  <text x="380" y="330" class="title">Notes</text>
-  <text x="380" y="355" class="text">• USB 13–18: Click, Cues, Tracks A–D</text>
-  <text x="380" y="378" class="text">• P16 uses Ultranet (not standard Ethernet)</text>
-  <text x="380" y="401" class="text">• Click/Cues: Main LR OFF (IEM only)</text>
-  <text x="380" y="424" class="text">• P16‑M Line Out can feed IEM TX</text>
+  <rect x="60" y="520" width="540" height="160" class="box" />
+  <text x="80" y="550" class="title">Notes</text>
+  <text x="80" y="575" class="text">• USB 13–18: Click, Cues, Tracks A–D</text>
+  <text x="80" y="598" class="text">• P16 uses Ultranet (not standard Ethernet)</text>
+  <text x="80" y="621" class="text">• Click/Cues: Main LR OFF (IEM only)</text>
+  <text x="80" y="644" class="text">• P16‑M Line Out can feed IEM TX</text>
 
 </svg>

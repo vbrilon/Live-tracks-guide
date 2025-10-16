@@ -13,6 +13,64 @@ Beginner-friendly guide to build a reliable live backing‑tracks rig using:
 - USB‑B cable (Mac ⇄ XR18), TRS cables to IEM transmitters/amps, power
 - MIDI foot controller for the drummer (for transport control)
 
+## System Diagram (Ultranet P16‑M Example)
+```
+ [Mac Laptop]
+ (Ableton Live + Ableset)
+         ||  USB‑B
+         \\==============================>
+                                   [Behringer X Air XR18]
+                                   (FOH mixer + USB interface)
+           Analog Inputs 1–12   ^          |  Ultranet (RJ45)
+   Mics, DI, instruments  ----->|          v
+                                              [Ultranet Hub]
+                                              (Behringer P16‑D or compatible)
+                                                  |—> [P16‑M Drummer]
+                                                  |—> [P16‑M Bassist]
+                                                  |—> [P16‑M Guitar]
+                                                  |—> [P16‑M Lead Vox]
+                                                  |—> [P16‑M BGV]
+
+   Main L/R  =======================>  FOH/PA
+```
+Notes
+- Use an Ultranet distributor (e.g., P16‑D). A regular Ethernet switch will not work; Ultranet is not standard Ethernet.
+- P16‑M units can also daisy‑chain; the P16‑D provides power + distribution over Ultranet.
+- This setup replaces analog IEM buses; personal mixes are made on each P16‑M using up to 16 Ultranet channels.
+
+## Ultranet Routing (XR18 → P16‑M)
+Ultranet carries 16 mono channels. Assign XR18 sources to Ultranet slots so every musician can build their own mix on a P16‑M. Use Pre‑EQ (or Pre‑Fader) taps so FOH changes don’t affect IEMs.
+
+How to assign
+- In X Air Edit: Routing → Ultranet.
+- For each Ultranet 1–16 slot: set Source to `DirOut Ch X` (or Card/Bus as noted) and Tap to `Pre EQ`.
+- Store as a Scene once verified.
+
+Recommended map (4 track stems)
+| Ultranet | Source (XR18)     | Tap    | Purpose                   |
+|----------|--------------------|--------|---------------------------|
+| 1        | DirOut Ch1         | Pre EQ | Kick                      |
+| 2        | DirOut Ch2         | Pre EQ | Snare                     |
+| 3        | DirOut Ch3         | Pre EQ | Tom                       |
+| 4        | DirOut Ch4         | Pre EQ | OH L                      |
+| 5        | DirOut Ch5         | Pre EQ | OH R                      |
+| 6        | DirOut Ch6         | Pre EQ | Bass (live or backing)    |
+| 7        | DirOut Ch7         | Pre EQ | Guitar (live or backing)  |
+| 8        | DirOut Ch8         | Pre EQ | Lead Vox                  |
+| 9        | DirOut Ch9         | Pre EQ | BGV 1                     |
+| 10       | DirOut Ch10        | Pre EQ | BGV 2                     |
+| 11       | DirOut Ch13 (USB)  | Pre EQ | Click (IEM only)          |
+| 12       | DirOut Ch14 (USB)  | Pre EQ | Cues (IEM only)           |
+| 13       | DirOut Ch15 (USB)  | Pre EQ | Tracks A (Perc/Loops)     |
+| 14       | DirOut Ch16 (USB)  | Pre EQ | Tracks B (Synth/Bass)     |
+| 15       | DirOut Ch17 (USB)  | Pre EQ | Tracks C (Keys/Pads)      |
+| 16       | DirOut Ch18 (USB)  | Pre EQ | Tracks D (BGV/FX)         |
+
+Notes and variants
+- Keep Click/Cues out of Main LR; Ultranet delivery is independent of mains.
+- Talkback is not mapped in this 4‑stem layout. If needed on P16, repurpose a slot (e.g., collapse OH to mono) or feed talkback via a shared bus.
+- Instrument‑swappable channels (e.g., Bass ch 6): when switching live ↔ track, the P16 feed stays on the same Ultranet slot; only the channel Source flips (Analog ↔ USB).
+
 ## File Organization
 - `LiveTracks/Songs/<SongName>/Stems/` — exported WAV stems (48k/24‑bit)
 - `LiveTracks/Songs/<SongName>/MIDI/` — optional tempo/marker MIDI (reference)
@@ -32,11 +90,41 @@ Beginner-friendly guide to build a reliable live backing‑tracks rig using:
 - 18 Tracks 4 (BGV/FX)
 
 ## IEM Bus Plan (mono)
+- Analog IEM alternative if not using P16 personal mixers.
 - Bus 1 Drummer, 2 Bassist, 3 Guitarist, 4 Lead Vox, 5 BGV/Spare
 - Sends tap: Pre EQ (recommended so FOH EQ/faders don’t affect IEMs)
 - Aux Out 1–5 feed your IEM transmitters/amps; set safe gain structure
 
 ---
+
+## Instrument‑Swappable Routing (Same Channel Numbers)
+Goal: keep FOH/IEM processing consistent whether a part is live or on backing tracks by using the same XR18 channel number for both and switching the channel source.
+
+### Mapping Overview
+| Part   | XR18 Ch | Ableton Output | Live Source      | Backing Source   | Notes                          |
+|--------|---------|----------------|------------------|------------------|---------------------------------|
+| Bass   | 6       | Ext. Out 6     | Analog (DI)      | USB (Card 6)     | Same EQ/comp/sends              |
+| Guitar | 7       | Ext. Out 7     | Analog (DI/Mic)  | USB (Card 7)     | Same EQ/comp/sends              |
+| Click  | 13      | Ext. Out 13    | —                | USB (Card 13)    | Main LR OFF (IEM only)          |
+| Cues   | 14      | Ext. Out 14    | —                | USB (Card 14)    | Main LR OFF (IEM only)          |
+| Tracks 1–4 | 15–18 | Ext. Out 15–18 | —              | USB (Card 15–18) | Group stems (percussion/keys/etc.) |
+
+### Example (Bass on channel 6)
+- Live bassist: XR18 ch 6 Source = Analog; Ableton Bass track muted/disabled.
+- Backing bass: Route Ableton Bass track to `Ext. Out 6`; set XR18 ch 6 Source = USB (Card 6). Keep EQ/comp/sends as usual.
+
+### Switching Live ↔ Track (per channel)
+1) Safety: Mute the channel on XR18 and lower its fader slightly to avoid pops.
+2) In Ableton:
+   - Live → Track: Unmute the backing clip/track; set `Audio To` to the channel’s output (e.g., Bass → `Ext. Out 6`).
+   - Track → Live: Mute/stop the backing clip/track.
+3) In X Air Edit (channel config):
+   - Live → Track: Set `Source` to `USB (Card <ch>)` (e.g., ch 6 → Card 6).
+   - Track → Live: Set `Source` to `Analog`.
+4) Unmute and set level. Confirm in meters that only one source is active (no doubling).
+5) Optional: Save quick scenes (e.g., `XR18_Live_Bass.scn` vs. `XR18_Track_Bass.scn`).
+
+Apply the same pattern for any absent instrument (e.g., Guitar on ch 7 → `Ext. Out 7`). Keep Click/Cues fixed on USB 13–14 (IEM only), and use 15–18 for non‑instrument group stems.
 
 ## Part 1 — Prepare Songs in Logic Pro
 1) Project setup
@@ -75,6 +163,7 @@ Tip: Keep stems loud enough but leave headroom (peaks around −6 dBFS).
   - Tracks 2 → `Ext. Out 16`
   - Tracks 3 → `Ext. Out 17`
   - Tracks 4 → `Ext. Out 18`
+ - For instrument‑swappable parts (e.g., Bass when no live player): create a dedicated `Bass` track and set `Audio To` → `Ext. Out 6` (match the XR18 channel number). Do the same for any other absent instrument (e.g., Guitar → `Ext. Out 7`).
 
 3) Import stems per song
 - For each song folder, drag stems into a new Scene (one row per song).
@@ -100,6 +189,7 @@ Tip: Keep stems loud enough but leave headroom (peaks around −6 dBFS).
 - On channels 13–18, set Source to `USB` (Card). On 1–12, keep `Analog`.
 - On ch 13 (Click) and 14 (Cues): disable `Main LR` send.
 - On ch 15–18 (stems): enable `Main LR` and set initial faders around −10 dB.
+ - For instrument‑swappable channels (e.g., Bass on ch 6): when using backing tracks, set Source = `USB (Card 6)`; when live, set Source = `Analog`. Keep the same channel strip and sends in both cases.
 
 3) IEM sends
 - Buses 1–5: set Send Tap to `Pre EQ` (Bus Sends → Gear icon or per‑channel send tap).
@@ -127,10 +217,13 @@ Tip: Keep stems loud enough but leave headroom (peaks around −6 dBFS).
 - Latency/pops: increase buffer to 256; close background apps; use wired Ethernet/Wi‑Fi off if using OSC.
 - Clips out of sync: ensure Warp is Off on all stems; re‑export aligned stems from Logic.
 - Ableset not controlling: verify MIDI device enabled in Ableset; Live is in focus; check mappings.
+- No bass when using backing: Ableton `Bass` track must be `Audio To: Ext. Out 6` and XR18 ch 6 Source = USB.
 
 ## Quick Reference
 - Sample rate: 48 kHz; Buffer: 128–256
 - Ableton outputs: Click 13, Cues 14, Stems 15–18 → XR18 ch 13–18 (USB)
+- Ultranet P16: 1–10 live channels; 11 Click; 12 Cues; 13–16 four stems
+- Instrument‑swappable: route backing part to the same output as the live channel number (e.g., Bass → 6) and flip XR18 channel Source (Analog ↔ USB).
 - IEM buses: 1–5 mono, Pre EQ; Aux Out 1–5 → IEM chain
 - Safety: `Main LR` OFF on Click/Cues; keep talkback to IEM only
 
@@ -138,3 +231,7 @@ Tip: Keep stems loud enough but leave headroom (peaks around −6 dBFS).
 
 This workflow keeps timing authoritative in audio (click/cues), avoids MIDI tempo import pitfalls, and gives FOH control over key stems while isolating click/cues to the band’s IEM mixes.
 
+## TODO
+- Add analog IEM bus variant diagram and routing steps.
+- Add screenshots of X Air Edit (Ultranet routing and channel source).
+- Add Ableset setlist example and MIDI footswitch mapping walkthrough.

@@ -59,7 +59,7 @@ Notes and variants
 - `LiveTracks/Songs/<SongName>/Session/` — Ableton set(s) and Ableset data
 - Naming (examples):
   - Descriptive: `RunAway_148BPM_Gmin_Drums.wav`, `RunAway_Click.wav`, `RunAway_Cues.wav`
-  - Channel‑indexed (recommended for fast import): `06_Bass.wav`, `07_Guitar.wav`, `13_Click.wav`, `14_Cues.wav`, `15_TracksA.wav`, `16_TracksB.wav`, `17_TracksC.wav`, `18_TracksD.wav`
+  - Channel‑indexed (recommended for fast import): `06_Bass.wav`, `07_Guitar.wav`, `08_LeadVox.wav` (optional), `12_Keys.wav` (optional), `13_Click.wav`, `14_Cues.wav`, `15_TracksA.wav`, `16_TracksB.wav`, `17_TracksC.wav`, `18_TracksD.wav`
   - Drum‑track, multi‑stem: `01_Kick.wav`, `02_Snare.wav`, `03_Tom.wav`, `04_OH_L.wav`, `05_OH_R.wav`
   - Drum‑track, stereo fallback: `04_Drums_L.wav`, `05_Drums_R.wav`
 
@@ -67,7 +67,7 @@ Notes and variants
 - 1 Kick, 2 Snare, 3 Tom, 4 OH L, 5 OH R
 - 6 Bass DI, 7 Guitar
 - 8 Lead Vox, 9 BGV 1, 10 BGV 2
-- 11 Talkback (IEM only), 12 Spare
+ - 11 Talkback (IEM only), 12 Keys (optional)
 - 13 Click (USB 13, Main LR OFF)
 - 14 Cues (USB 14, Main LR OFF)
 - 15 Tracks 1 (Perc/Loops)
@@ -92,13 +92,15 @@ P16‑M option (no XR18 bus needed)
 Goal: keep FOH/IEM processing consistent whether a part is live or on backing tracks by using the same XR18 channel number for both and switching the channel source.
 
 ### Mapping Overview
-| Part   | XR18 Ch | Ableton Output | Live Source      | Backing Source   | Notes                          |
-|--------|---------|----------------|------------------|------------------|---------------------------------|
-| Bass   | 6       | Ext. Out 6     | Analog (DI)      | USB (Card 6)     | Same EQ/comp/sends              |
-| Guitar | 7       | Ext. Out 7     | Analog (DI/Mic)  | USB (Card 7)     | Same EQ/comp/sends              |
-| Click  | 13      | Ext. Out 13    | —                | USB (Card 13)    | Main LR OFF (IEM only)          |
-| Cues   | 14      | Ext. Out 14    | —                | USB (Card 14)    | Main LR OFF (IEM only)          |
-| Tracks 1–4 | 15–18 | Ext. Out 15–18 | —              | USB (Card 15–18) | Group stems (percussion/keys/etc.) |
+| Part          | XR18 Ch | Ableton Output   | Live Source      | Backing Source      | Notes                                        |
+|---------------|---------|------------------|------------------|---------------------|---------------------------------------------|
+| Bass          | 6       | Ext. Out 6       | Analog (DI)      | USB (Card 6)        | Same EQ/comp/sends                           |
+| Guitar        | 7       | Ext. Out 7       | Analog (DI/Mic)  | USB (Card 7)        | Same EQ/comp/sends                           |
+| Keys (track)  | 17      | Ext. Out 17      | —                | USB (Card 17)       | Default in Tracks C; optional direct on ch12 |
+| Lead Vox (trk)| 18      | Ext. Out 18      | —                | USB (Card 18)       | Use when augmenting/covering; default mic ch8|
+| Click         | 13      | Ext. Out 13      | —                | USB (Card 13)       | Main LR OFF (IEM only)                       |
+| Cues          | 14      | Ext. Out 14      | —                | USB (Card 14)       | Main LR OFF (IEM only)                       |
+| Tracks 1–4    | 15–18   | Ext. Out 15–18   | —                | USB (Card 15–18)    | Group stems (Perc A, Synth B, Keys C, BGV D) |
 
 ### Example (Bass on channel 6)
 - Live bassist: XR18 ch 6 Source = Analog; Ableton Bass track muted/disabled.
@@ -117,6 +119,18 @@ Goal: keep FOH/IEM processing consistent whether a part is live or on backing tr
 
 Apply the same pattern for any absent instrument (e.g., Guitar on ch 7 → `Ext. Out 7`). Keep Click/Cues fixed on USB 13–14 (IEM only), and use 15–18 for non‑instrument group stems.
 
+### Switching to Drum Tracks (Checklist)
+- Mute: On XR18, mute ch 1–5 and pull faders to a safe level.
+- Route in Ableton: Add `Drums L` → `Ext. Out 4` and `Drums R` → `Ext. Out 5` (or a single `Drums` mono track → `Ext. Out 4`).
+- Flip Sources on XR18: Set ch 4→USB (Card 4) and ch 5→USB (Card 5). Leave ch 1–3 on Analog (unused) or keep them muted.
+- Unmute & Verify: Unmute ch 4/5, check meters/phones. Confirm P16 slots 4/5 carry drums; slots 1–3 will be silent.
+
+### Drum Track Modes (Summed vs Live)
+- Live drummer (multi‑mic): ch 1 Kick, 2 Snare, 3 Tom, 4 OH L, 5 OH R → Sources = Analog.
+- Summed stereo drum track: `Drums L`/`Drums R` on Ableton → `Ext. Out 4/5`; XR18 ch 4/5 Sources = USB; keep ch 1–3 muted.
+- Summed mono drum track: `Drums` mono on Ableton → `Ext. Out 4`; XR18 ch 4 Source = USB; mute ch 1–3 and 5.
+- P16 impact: Ultranet 1–3 become unused in summed mode; keep mapping for consistency or repurpose if needed.
+
 ## Channel Binding Standard (XR18 ↔ Ableton ↔ P16)
 Keep indexes consistent for easy import and predictable monitoring. Channel 6 is always Bass across the system.
 
@@ -129,21 +143,34 @@ Keep indexes consistent for easy import and predictable monitoring. Channel 6 is
 | OH R       | 5       | Ext. Out 5     |        5 | Instrument‑swappable (live/track)     |
 | Bass       | 6       | Ext. Out 6     |        6 | Instrument‑swappable (live/track)     |
 | Guitar     | 7       | Ext. Out 7     |        7 | Instrument‑swappable (live/track)     |
-| Lead Vox   | 8       | —              |        8 | Mic input; no backing on this ch      |
+| Lead Vox   | 8       | Ext. Out 8 (opt) |      8 | Mic by default; can be track via ch8/USB; otherwise use 18 as track |
 | BGV 1      | 9       | —              |        9 | Mic input                             |
 | BGV 2      | 10      | —              |       10 | Mic input                             |
 | Click      | 13      | Ext. Out 13    |       11 | IEM only; Main LR OFF                 |
 | Cues       | 14      | Ext. Out 14    |       12 | IEM only; Main LR OFF                 |
 | Tracks A   | 15      | Ext. Out 15    |       13 | Perc/Loops                            |
 | Tracks B   | 16      | Ext. Out 16    |       14 | Synth/Bass (no Bass if 06_Bass used)  |
-| Tracks C   | 17      | Ext. Out 17    |       15 | Keys/Pads                             |
-| Tracks D   | 18      | Ext. Out 18    |       16 | BGV/FX                                |
+| Tracks C   | 17      | Ext. Out 17    |       15 | Keys/Pads (or use direct 12_Keys)     |
+| Tracks D   | 18      | Ext. Out 18    |       16 | BGV/FX (can include Lead Vox track)   |
+| Keys (opt) | 12      | Ext. Out 12    |   12/15 | Direct keys channel (optional) or via Tracks C |
 
 Import/backfill rules
 - If using a backing Bass part, export `06_Bass.wav`, route to `Ext. Out 6`, and flip XR18 ch 6 Source to USB.
 - When `06_Bass.wav` is present, remove Bass content from `16_TracksB.wav` to avoid doubling.
 - If no `06_Bass.wav`, include Bass in `16_TracksB.wav` and keep XR18 ch 6 Source = Analog for a live DI (or mute if no DI connected).
 - Apply the same pattern for Guitar on channel 7 as needed.
+ - Keys: default keep in `17_TracksC.wav`. If using a dedicated keys channel, export `12_Keys.wav` → `Ext. Out 12`, flip XR18 ch 12 to USB, and remove keys from `17_TracksC.wav`.
+ - Lead Vocal track: default keep in `18_TracksD.wav` when augmenting a live vocal. If no live singer, you may export `08_LeadVox.wav` → `Ext. Out 8`, flip XR18 ch 8 to USB, and remove lead vocal from `18_TracksD.wav`.
+
+### Dedicated Channels vs. Stems — When to Use Which
+- Prefer stems (15–18) for most tracks to keep routing simple and consistent across songs.
+- Use a dedicated channel when you need instrument‑swappable consistency or tighter control:
+  - No live player and you want the same FOH/IEM processing as the live channel (e.g., Bass on ch 6, Guitar on ch 7).
+  - You need independent EQ/comp/mutes that shouldn’t affect other parts in the stem.
+  - Keys require separate control per song (use ch 12) instead of living inside `17_TracksC`.
+  - Lead vocal needs to be fully tracked (use ch 8) instead of grouped in `18_TracksD`.
+- Avoid doubling: when promoting an instrument to a dedicated channel, remove it from its stem file.
+- If XR18 USB returns are limited on a show, keep more parts inside stems to reduce outputs.
 
 ## Part 1 — Prepare Songs in Logic Pro
 1) Project setup

@@ -74,19 +74,19 @@
   <!-- Connections -->
   <!-- USB from Mac to XR18 -->
   <line x1="300" y1="180" x2="360" y2="180" class="usb" marker-end="url(#arrowBlue)" />
-  <text x="310" y="170" class="label" fill="#1f78d1">USB (Audio 1–18)</text>
+  <text x="260" y="160" class="label" fill="#1f78d1">USB (Audio 1–18)</text>
 
-  <!-- Analog from sources to XR18 -->
-  <line x1="320" y1="340" x2="360" y2="340" class="analog" marker-end="url(#arrowGreen)" />
-  <text x="325" y="330" class="label" fill="#2e7d32">Analog Inputs 1–12</text>
+  <!-- Analog from sources to XR18 (routed up and in) -->
+  <polyline points="320,360 320,220 360,220" class="analog" marker-end="url(#arrowGreen)" />
+  <text x="250" y="215" class="label" fill="#2e7d32">Analog Inputs 1–12</text>
 
-  <!-- Mains from XR18 to FOH/PA -->
-  <line x1="640" y1="140" x2="780" y2="125" class="analog" marker-end="url(#arrowGreen)" />
-  <text x="680" y="120" class="label" fill="#2e7d32">Main L/R</text>
+  <!-- Mains from XR18 to FOH/PA (slightly above text) -->
+  <polyline points="640,140 710,140 780,120" class="analog" marker-end="url(#arrowGreen)" />
+  <text x="690" y="112" class="label" fill="#2e7d32">Main L/R</text>
 
   <!-- Ultranet from XR18 to P16-D -->
   <line x1="640" y1="220" x2="760" y2="290" class="ultranet" marker-end="url(#arrowOrange)" />
-  <text x="670" y="265" class="label" fill="#f57c00">Ultranet (16 ch)</text>
+  <text x="670" y="250" class="label" fill="#f57c00">Ultranet (16 ch)</text>
 
   <!-- Hub to P16-M fanout -->
   <line x1="910" y1="360" x2="910" y2="410" class="ultranet" marker-end="url(#arrowOrange)" />

@@ -75,7 +75,9 @@ Notes and variants
 - `LiveTracks/Songs/<SongName>/Stems/` — exported WAV stems (48k/24‑bit)
 - `LiveTracks/Songs/<SongName>/MIDI/` — optional tempo/marker MIDI (reference)
 - `LiveTracks/Songs/<SongName>/Session/` — Ableton set(s) and Ableset data
-- Naming (example): `RunAway_148BPM_Gmin_Drums.wav`, `RunAway_Click.wav`, `RunAway_Cues.wav`
+- Naming (examples):
+  - Descriptive: `RunAway_148BPM_Gmin_Drums.wav`, `RunAway_Click.wav`, `RunAway_Cues.wav`
+  - Channel‑indexed (recommended for fast import): `06_Bass.wav`, `07_Guitar.wav`, `13_Click.wav`, `14_Cues.wav`, `15_TracksA.wav`, `16_TracksB.wav`, `17_TracksC.wav`, `18_TracksD.wav`
 
 ## Channel Map (XR18)
 - 1 Kick, 2 Snare, 3 Tom, 4 OH L, 5 OH R
@@ -125,6 +127,34 @@ Goal: keep FOH/IEM processing consistent whether a part is live or on backing tr
 5) Optional: Save quick scenes (e.g., `XR18_Live_Bass.scn` vs. `XR18_Track_Bass.scn`).
 
 Apply the same pattern for any absent instrument (e.g., Guitar on ch 7 → `Ext. Out 7`). Keep Click/Cues fixed on USB 13–14 (IEM only), and use 15–18 for non‑instrument group stems.
+
+## Channel Binding Standard (XR18 ↔ Ableton ↔ P16)
+Keep indexes consistent for easy import and predictable monitoring. Channel 6 is always Bass across the system.
+
+| Role       | XR18 Ch | Ableton Output | P16 Slot | Notes                                 |
+|------------|---------|----------------|---------:|---------------------------------------|
+| Kick       | 1       | Ext. Out 1     |        1 | Live mic only (backing goes to stems) |
+| Snare      | 2       | Ext. Out 2     |        2 | Live mic only                         |
+| Tom        | 3       | Ext. Out 3     |        3 | Live mic only                         |
+| OH L       | 4       | Ext. Out 4     |        4 | Live mic only                         |
+| OH R       | 5       | Ext. Out 5     |        5 | Live mic only                         |
+| Bass       | 6       | Ext. Out 6     |        6 | Instrument‑swappable (live/track)     |
+| Guitar     | 7       | Ext. Out 7     |        7 | Instrument‑swappable (live/track)     |
+| Lead Vox   | 8       | —              |        8 | Mic input; no backing on this ch      |
+| BGV 1      | 9       | —              |        9 | Mic input                             |
+| BGV 2      | 10      | —              |       10 | Mic input                             |
+| Click      | 13      | Ext. Out 13    |       11 | IEM only; Main LR OFF                 |
+| Cues       | 14      | Ext. Out 14    |       12 | IEM only; Main LR OFF                 |
+| Tracks A   | 15      | Ext. Out 15    |       13 | Perc/Loops                            |
+| Tracks B   | 16      | Ext. Out 16    |       14 | Synth/Bass (no Bass if 06_Bass used)  |
+| Tracks C   | 17      | Ext. Out 17    |       15 | Keys/Pads                             |
+| Tracks D   | 18      | Ext. Out 18    |       16 | BGV/FX                                |
+
+Import/backfill rules
+- If using a backing Bass part, export `06_Bass.wav`, route to `Ext. Out 6`, and flip XR18 ch 6 Source to USB.
+- When `06_Bass.wav` is present, remove Bass content from `16_TracksB.wav` to avoid doubling.
+- If no `06_Bass.wav`, include Bass in `16_TracksB.wav` and keep XR18 ch 6 Source = Analog for a live DI (or mute if no DI connected).
+- Apply the same pattern for Guitar on channel 7 as needed.
 
 ## Part 1 — Prepare Songs in Logic Pro
 1) Project setup
@@ -235,3 +265,4 @@ This workflow keeps timing authoritative in audio (click/cues), avoids MIDI temp
 - Add analog IEM bus variant diagram and routing steps.
 - Add screenshots of X Air Edit (Ultranet routing and channel source).
 - Add Ableset setlist example and MIDI footswitch mapping walkthrough.
+- Add templates: Logic Pro project prep template and Ableton .als with pre-routed outputs (06 Bass, 07 Guitar, 13–18 Click/Cues/Tracks A–D).

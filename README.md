@@ -14,7 +14,7 @@ Beginner-friendly guide to build a reliable live backing‑tracks rig using:
 - MIDI foot controller for the drummer (for transport control)
 
 ## System Diagram (Ultranet P16‑M Example)
-![System Diagram — Mac ↔ XR18 USB, Ultranet P16‑M](LiveTracks/Assets/img/system-diagram.svg)
+![System Diagram — Mac ↔ XR18 USB, Ultranet P16‑M](Assets/img/system-diagram.svg)
 Notes
 - Use an Ultranet distributor (e.g., P16‑D). A regular Ethernet switch will not work; Ultranet is not standard Ethernet.
 - P16‑M units can also daisy‑chain; the P16‑D provides power + distribution over Ultranet.

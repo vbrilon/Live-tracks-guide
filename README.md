@@ -14,25 +14,7 @@ Beginner-friendly guide to build a reliable live backing‑tracks rig using:
 - MIDI foot controller for the drummer (for transport control)
 
 ## System Diagram (Ultranet P16‑M Example)
-```
- [Mac Laptop]
- (Ableton Live + Ableset)
-         ||  USB‑B
-         \\==============================>
-                                   [Behringer X Air XR18]
-                                   (FOH mixer + USB interface)
-           Analog Inputs 1–12   ^          |  Ultranet (RJ45)
-   Mics, DI, instruments  ----->|          v
-                                              [Ultranet Hub]
-                                              (Behringer P16‑D or compatible)
-                                                  |—> [P16‑M Drummer]
-                                                  |—> [P16‑M Bassist]
-                                                  |—> [P16‑M Guitar]
-                                                  |—> [P16‑M Lead Vox]
-                                                  |—> [P16‑M BGV]
-
-   Main L/R  =======================>  FOH/PA
-```
+![System Diagram — Mac ↔ XR18 USB, Ultranet P16‑M](LiveTracks/Assets/img/system-diagram.svg)
 Notes
 - Use an Ultranet distributor (e.g., P16‑D). A regular Ethernet switch will not work; Ultranet is not standard Ethernet.
 - P16‑M units can also daisy‑chain; the P16‑D provides power + distribution over Ultranet.
@@ -78,6 +60,8 @@ Notes and variants
 - Naming (examples):
   - Descriptive: `RunAway_148BPM_Gmin_Drums.wav`, `RunAway_Click.wav`, `RunAway_Cues.wav`
   - Channel‑indexed (recommended for fast import): `06_Bass.wav`, `07_Guitar.wav`, `13_Click.wav`, `14_Cues.wav`, `15_TracksA.wav`, `16_TracksB.wav`, `17_TracksC.wav`, `18_TracksD.wav`
+  - Drum‑track, multi‑stem: `01_Kick.wav`, `02_Snare.wav`, `03_Tom.wav`, `04_OH_L.wav`, `05_OH_R.wav`
+  - Drum‑track, stereo fallback: `04_Drums_L.wav`, `05_Drums_R.wav`
 
 ## Channel Map (XR18)
 - 1 Kick, 2 Snare, 3 Tom, 4 OH L, 5 OH R
@@ -96,6 +80,11 @@ Notes and variants
 - Bus 1 Drummer, 2 Bassist, 3 Guitarist, 4 Lead Vox, 5 BGV/Spare
 - Sends tap: Pre EQ (recommended so FOH EQ/faders don’t affect IEMs)
 - Aux Out 1–5 feed your IEM transmitters/amps; set safe gain structure
+
+P16‑M option (no XR18 bus needed)
+- Each musician can feed their IEM transmitter directly from their P16‑M Line Out L/R, using their personal Ultranet mix.
+- For stereo packs: connect both L and R to the transmitter’s L/R inputs; for mono packs: use one side or sum to mono per your transmitter’s manual.
+- Keep P16‑M output at line level; set transmitter input sensitivity accordingly. Avoid using the headphone jack unless specified by the transmitter manufacturer.
 
 ---
 
@@ -133,11 +122,11 @@ Keep indexes consistent for easy import and predictable monitoring. Channel 6 is
 
 | Role       | XR18 Ch | Ableton Output | P16 Slot | Notes                                 |
 |------------|---------|----------------|---------:|---------------------------------------|
-| Kick       | 1       | Ext. Out 1     |        1 | Live mic only (backing goes to stems) |
-| Snare      | 2       | Ext. Out 2     |        2 | Live mic only                         |
-| Tom        | 3       | Ext. Out 3     |        3 | Live mic only                         |
-| OH L       | 4       | Ext. Out 4     |        4 | Live mic only                         |
-| OH R       | 5       | Ext. Out 5     |        5 | Live mic only                         |
+| Kick       | 1       | Ext. Out 1     |        1 | Instrument‑swappable (live/track)     |
+| Snare      | 2       | Ext. Out 2     |        2 | Instrument‑swappable (live/track)     |
+| Tom        | 3       | Ext. Out 3     |        3 | Instrument‑swappable (live/track)     |
+| OH L       | 4       | Ext. Out 4     |        4 | Instrument‑swappable (live/track)     |
+| OH R       | 5       | Ext. Out 5     |        5 | Instrument‑swappable (live/track)     |
 | Bass       | 6       | Ext. Out 6     |        6 | Instrument‑swappable (live/track)     |
 | Guitar     | 7       | Ext. Out 7     |        7 | Instrument‑swappable (live/track)     |
 | Lead Vox   | 8       | —              |        8 | Mic input; no backing on this ch      |
@@ -192,8 +181,9 @@ Tip: Keep stems loud enough but leave headroom (peaks around −6 dBFS).
   - Tracks 1 → `Ext. Out 15`
   - Tracks 2 → `Ext. Out 16`
   - Tracks 3 → `Ext. Out 17`
-  - Tracks 4 → `Ext. Out 18`
+ - Tracks 4 → `Ext. Out 18`
  - For instrument‑swappable parts (e.g., Bass when no live player): create a dedicated `Bass` track and set `Audio To` → `Ext. Out 6` (match the XR18 channel number). Do the same for any other absent instrument (e.g., Guitar → `Ext. Out 7`).
+ - No live drummer: add tracks `Kick`, `Snare`, `Tom`, `OH L`, `OH R` and set `Audio To` → `Ext. Out 1`, `2`, `3`, `4`, `5` respectively. If you only have a stereo drum bounce, use `Drums L` → `Ext. Out 4` and `Drums R` → `Ext. Out 5`.
 
 3) Import stems per song
 - For each song folder, drag stems into a new Scene (one row per song).
@@ -220,6 +210,7 @@ Tip: Keep stems loud enough but leave headroom (peaks around −6 dBFS).
 - On ch 13 (Click) and 14 (Cues): disable `Main LR` send.
 - On ch 15–18 (stems): enable `Main LR` and set initial faders around −10 dB.
  - For instrument‑swappable channels (e.g., Bass on ch 6): when using backing tracks, set Source = `USB (Card 6)`; when live, set Source = `Analog`. Keep the same channel strip and sends in both cases.
+ - No live drummer: set ch 1–5 `Source` to `USB (Card 1–5)`; if using stereo drums on 4/5, leave 1–3 `Source` as Analog but mute/park them.
 
 3) IEM sends
 - Buses 1–5: set Send Tap to `Pre EQ` (Bus Sends → Gear icon or per‑channel send tap).
@@ -248,12 +239,15 @@ Tip: Keep stems loud enough but leave headroom (peaks around −6 dBFS).
 - Clips out of sync: ensure Warp is Off on all stems; re‑export aligned stems from Logic.
 - Ableset not controlling: verify MIDI device enabled in Ableset; Live is in focus; check mappings.
 - No bass when using backing: Ableton `Bass` track must be `Audio To: Ext. Out 6` and XR18 ch 6 Source = USB.
+ - No drums when using backing: Kick/Snare/Tom/OH tracks must be `Audio To: Ext. Out 1–5` and XR18 ch 1–5 Source = USB.
+ - Double drums: remove drum content from `15–18` stems if routing to `1–5` (or mute 1–5 if using drum stems on `15–18`).
 
 ## Quick Reference
 - Sample rate: 48 kHz; Buffer: 128–256
 - Ableton outputs: Click 13, Cues 14, Stems 15–18 → XR18 ch 13–18 (USB)
 - Ultranet P16: 1–10 live channels; 11 Click; 12 Cues; 13–16 four stems
 - Instrument‑swappable: route backing part to the same output as the live channel number (e.g., Bass → 6) and flip XR18 channel Source (Analog ↔ USB).
+ - Drum tracks: preferred 1–5 mapping (Kick 1, Snare 2, Tom 3, OH L 4, OH R 5); stereo fallback 4/5.
 - IEM buses: 1–5 mono, Pre EQ; Aux Out 1–5 → IEM chain
 - Safety: `Main LR` OFF on Click/Cues; keep talkback to IEM only
 

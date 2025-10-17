@@ -13,6 +13,9 @@ Plain‑language concepts
   - Ultranet: P16‑M personal mixers get up to 16 channels from the XR18’s Ultranet port.
   - Analog IEM buses: XR18 Buses 1–5 feed Aux Outs 1–5 to your transmitters/amps.
 
+Channel consistency principle (must do)
+- For any instrument you swap from live to backing (or back), keep the same XR18 channel number. Route Ableton to that channel’s number and flip the channel Source (Analog ↔ USB). This keeps FOH workflow, IEM sends, and Ultranet slots consistent.
+
 Why 48 kHz and a 128–256 buffer?
 - XR18 defaults to 48 kHz. Keep everything at 48 kHz to avoid resampling and clock issues.
 - 128–256 buffer is a good live balance: low latency but stable. If you hear pops/clicks, try 256.
@@ -27,4 +30,3 @@ Helpful screenshots to capture
 - macOS Audio MIDI Setup showing the XR18 device present.
 
 [Home](../README.md) · [Architecture](architecture.md) · [X Air Routing](xair-routing.md) · [Ultranet](ultranet-routing.md) · [Tracks Prep](tracks-prep.md) · [Operation](operation.md) · [Troubleshooting](troubleshooting.md)
-

@@ -20,9 +20,16 @@ Hardware & software checklist
 Quick reference
 - Sample rate 48 kHz; Buffer 128–256
 - Ableton outputs: Click 13, Cues 14, Stems 15–18 → XR18 ch 13–18 (USB)
-- Safety: “Main LR” OFF on Click/Cues; talkback to IEM only
+- Instrument‑swappable (any instrument): keep the same channel number (e.g., Bass → 6, Guitar → 7, Keys → 12; Drums → 1–5 if tracked) and flip XR18 Source (Analog ↔ USB). Remove that instrument from stems to avoid doubles.
+- Safety: “Main LR” OFF on Click/Cues
 
 TODO
 - Add analog IEM bus variant diagram and routing steps
 - Add screenshots (X Air Edit, Ultranet, Ableton, Ableset, Logic exports)
+  - Temporary vendor image used for Ableset setlist preview; replace with your own captures
+  - Capture and place screenshots into `Assets/img/screenshots/` with these filenames:
+    - `xair-setup-audio-48k.png`, `xair-channel-13-mainlr-off.png`, `xair-channel-15-usb.png`, `xair-buses-pre-eq-tap.png`, `xair-routing-ultranet-grid.png`
+    - `ableton-prefs-output-config.png`, `ableton-track-io-ext-out-13-18.png`, `ableton-clip-warp-off.png`
+    - `ableset-setlist.png`, `ableset-midi-mapping.png`
+    - `logic-smart-tempo.png`, `logic-export-all-tracks.png`
 - Add templates: Logic prep template and Ableton .als pre‑routed (06/07/13–18)

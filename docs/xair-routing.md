@@ -6,13 +6,18 @@ Recommended channel map
 - 1 Kick, 2 Snare, 3 Tom, 4 OH L, 5 OH R
 - 6 Bass DI, 7 Guitar
 - 8 Lead Vox, 9 BGV 1, 10 BGV 2
-- 11 Talkback (IEM only), 12 Keys (optional)
+- 11 Spare/Utility, 12 Keys (optional)
 - 13 Click (USB 13, Main LR OFF)
 - 14 Cues (USB 14, Main LR OFF)
 - 15 Tracks 1 (Perc/Loops)
 - 16 Tracks 2 (Synth/Bass)
-- 17 Tracks 3 (Keys/Pads)
+- 17 Tracks 3 (Pads/FX)
 - 18 Tracks 4 (BGV/FX)
+
+Consistency rules (live ↔ tracks)
+- For any instrument, the channel number stays the same whether it’s live or from tracks. You only flip the XR18 channel Source (Analog ↔ USB) and route Ableton to that exact channel number.
+- Examples: Bass → ch 6, Guitar → ch 7, Keys → ch 12, Drums → ch 1–5 (if running drum tracks, route Kick/Snare/Tom/OH to 1–5 and remove drums from stems on 15–18).
+- Avoid duplication: when you promote any instrument to its dedicated channel, remove it from the stems so it isn’t doubled (e.g., if Keys are on ch 12, do not include Keys inside the stem feeding ch 17).
 
 Step‑by‑step in X Air Edit (Mac)
 1) Global
@@ -31,7 +36,6 @@ Step‑by‑step in X Air Edit (Mac)
 3) IEM sends
 - Buses 1–5: set Send Tap = Pre‑EQ (so FOH tweaks don’t change IEMs).
 - Build each performer’s mix by raising sends from the needed channels.
-- Talkback mic (e.g., ch 11): Main LR OFF; send to IEM buses only.
 
 4) Outputs
 - Aux Out 1–5 → Bus 1–5 (default). Connect to IEM transmitters/amps at line level.
@@ -39,7 +43,27 @@ Step‑by‑step in X Air Edit (Mac)
 
 Helpful screenshots
 - Channel view: Source selector (USB vs Analog).
-- Sends view: Main LR OFF on ch 13–14; bus tap set to Pre‑EQ.
+
+  ![X Air Edit — Channel Source set to USB](../Assets/img/screenshots/xair-channel-15-usb.png)
+
+  Note: TODO — replace with your own screenshot showing ch 15 set to USB (Card 15).
+
+- Ch 13–14 with Main LR OFF (Click/Cues safety).
+
+  ![X Air Edit — Ch 13 Main LR OFF](../Assets/img/screenshots/xair-channel-13-mainlr-off.png)
+
+  Note: TODO — replace with your own screenshot for both ch 13 and 14.
+
+- Bus sends tap set to Pre‑EQ.
+
+  ![X Air Edit — Bus Sends Tap Pre‑EQ](../Assets/img/screenshots/xair-buses-pre-eq-tap.png)
+
+  Note: TODO — replace with your own screenshot (Bus Sends gear → Pre‑EQ).
+
+- Setup → Audio/MIDI at 48 kHz.
+
+  ![X Air Edit — Setup 48 kHz](../Assets/img/screenshots/xair-setup-audio-48k.png)
+
+  Note: TODO — replace with your own screenshot.
 
 [Home](../README.md) · [Architecture](architecture.md) · [X Air Routing](xair-routing.md) · [Ultranet](ultranet-routing.md) · [Tracks Prep](tracks-prep.md) · [Operation](operation.md) · [Troubleshooting](troubleshooting.md)
-

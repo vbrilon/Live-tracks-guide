@@ -16,16 +16,20 @@ Recommended Ultranet map (4 stems)
 - 11 Click (from ch 13 USB), 12 Cues (from ch 14 USB)
 - 13 Tracks A (Perc/Loops, ch 15 USB)
 - 14 Tracks B (Synth/Bass, ch 16 USB)
-- 15 Tracks C (Keys/Pads, ch 17 USB)
+- 15 Tracks C (Pads/FX, ch 17 USB)
 - 16 Tracks D (BGV/FX, ch 18 USB)
 
 Notes and variants
 - Keep Click/Cues out of Main LR; Ultranet is independent of mains.
 - Talkback is not mapped above. If needed on P16, repurpose a slot (e.g., collapse OH to mono) or feed talkback via a shared bus.
-- Instrument‑swappable parts (e.g., Bass ch 6): the P16 slot remains constant; only the XR18 channel Source flips (Analog ↔ USB).
+- Channel consistency (must do): For any instrument you swap (Bass 6, Guitar 7, Keys 12, Drums 1–5), keep the same XR18 channel number and the same Ultranet slot. Only flip the channel Source (Analog ↔ USB) and route Ableton to that channel’s number.
+- Avoid duplication: when promoting any instrument to a dedicated channel, remove it from the stems feeding 15–18 so P16 users don’t hear doubles.
 
 Helpful screenshots
 - Routing → Ultranet grid showing slot sources and Pre‑EQ taps.
 
-[Home](../README.md) · [Architecture](architecture.md) · [X Air Routing](xair-routing.md) · [Ultranet](ultranet-routing.md) · [Tracks Prep](tracks-prep.md) · [Operation](operation.md) · [Troubleshooting](troubleshooting.md)
+  ![X Air Edit — Ultranet slot routing](../Assets/img/screenshots/xair-routing-ultranet-grid.png)
 
+  Note: TODO — replace with your own screenshot (Routing → Ultranet).
+
+[Home](../README.md) · [Architecture](architecture.md) · [X Air Routing](xair-routing.md) · [Ultranet](ultranet-routing.md) · [Tracks Prep](tracks-prep.md) · [Operation](operation.md) · [Troubleshooting](troubleshooting.md)

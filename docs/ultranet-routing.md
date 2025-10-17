@@ -24,6 +24,7 @@ Notes and variants
 - Talkback is not mapped above. If needed on P16, repurpose a slot (e.g., collapse OH to mono) or feed talkback via a shared bus.
 - Channel consistency (must do): For any instrument you swap (Bass 6, Guitar 7, Keys 12, Drums 1–5), keep the same XR18 channel number and the same Ultranet slot. Only flip the channel Source (Analog ↔ USB) and route Ableton to that channel’s number.
 - Avoid duplication: when promoting any instrument to a dedicated channel, remove it from the stems feeding 15–18 so P16 users don’t hear doubles.
+ - Drum tracks: if you use mono drums, deliver them on slot 4 (matching ch 4). For stereo drums, use slots 4/5. For multi‑stem drums, keep 1–5 as listed.
 
 Helpful screenshots
 - Routing → Ultranet grid showing slot sources and Pre‑EQ taps.
@@ -31,5 +32,6 @@ Helpful screenshots
   ![X Air Edit — Ultranet slot routing](../Assets/img/screenshots/xair-routing-ultranet-grid.png)
 
   Note: TODO — replace with your own screenshot (Routing → Ultranet).
+  Reference manual (PDF): https://usermanual.wiki/Document/XAIREditOperationManual.790879087.pdf
 
 [Home](../README.md) · [Architecture](architecture.md) · [X Air Routing](xair-routing.md) · [Ultranet](ultranet-routing.md) · [Tracks Prep](tracks-prep.md) · [Operation](operation.md) · [Troubleshooting](troubleshooting.md)

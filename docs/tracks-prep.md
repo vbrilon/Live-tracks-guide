@@ -10,6 +10,7 @@ File organization and naming
   - Core: `13_Click.wav`, `14_Cues.wav`, `15_TracksA.wav`, `16_TracksB.wav`, `17_TracksC.wav`, `18_TracksD.wav`
   - Optional dedicates: `06_Bass.wav`, `07_Guitar.wav`, `12_Keys.wav`, `08_LeadVox.wav`
   - Drums multi‑stem: `01_Kick.wav`, `02_Snare.wav`, `03_Tom.wav`, `04_OH_L.wav`, `05_OH_R.wav`
+  - Drums mono fallback: `04_Drums.wav`
   - Drums stereo fallback: `04_Drums_L.wav`, `05_Drums_R.wav`
 
 Critical rule — channel numbers never change
@@ -43,12 +44,14 @@ Screenshots that help here
   ![Logic Pro — Smart Tempo / Global Tracks](../Assets/img/screenshots/logic-smart-tempo.png)
 
   Note: TODO — replace with your own screenshot (Global Tracks visible with downbeats aligned).
+  Source: https://support.apple.com/guide/logicpro/smart-tempo-overview-lgcpbbef4bfc/mac
 
 - Export dialog with 48 kHz / 24‑bit / Normalize Off.
 
   ![Logic Pro — Export All Tracks as Audio Files](../Assets/img/screenshots/logic-export-all-tracks.png)
 
   Note: TODO — replace with your own screenshot of the Export dialog.
+  Tip: https://support.apple.com/guide/logicpro/export-projects-lgcp2ea17c68/mac
 
 ## Ableton Work (routing, scenes, warp)
 1) Audio preferences
@@ -66,7 +69,10 @@ Screenshots that help here
   - Tracks 3 → `Ext. Out 17`
   - Tracks 4 → `Ext. Out 18`
 - Instrument‑swappable parts: add dedicated `Bass` → `Ext. Out 6`, `Guitar` → `Ext. Out 7`, `Keys` → `Ext. Out 12` as needed. When you promote a part to a dedicated channel, remove that instrument from the stems (e.g., if using `Keys` on 12, do not include Keys inside the stem on 17).
-- No live drummer: add `Kick` → 1, `Snare` → 2, `Tom` → 3, `OH L` → 4, `OH R` → 5 (or `Drums L` → 4, `Drums R` → 5 if stereo).
+- No live drummer (choose one):
+  - Mono summed drums: add `Drums` → `Ext. Out 4`.
+  - Stereo drums: add `Drums L` → `Ext. Out 4`, `Drums R` → `Ext. Out 5`.
+  - Multi‑stem drums: add `Kick` → 1, `Snare` → 2, `Tom` → 3, `OH L` → 4, `OH R` → 5.
 
 3) Import stems per song
 - Drag each song’s stems into a new Scene (one row per song).
@@ -84,18 +90,21 @@ Screenshots that help here
   ![Ableton Live — Output Config (Mono 1–18 enabled)](../Assets/img/screenshots/ableton-prefs-output-config.png)
 
   Note: TODO — replace with your own screenshot captured on your system (Preferences → Audio → Output Config).
+  Source: https://help.ableton.com/hc/en-us/articles/209068929-Audio-Preferences
 
 - Track I/O section showing `Audio To: Ext. Out 13–18`.
 
   ![Ableton Live — Track I/O routing to Ext. Out 13–18](../Assets/img/screenshots/ableton-track-io-ext-out-13-18.png)
 
   Note: TODO — replace with your own screenshot (toggle I/O section with the I/O button in Session View).
+  Tip: https://help.ableton.com/ (search “Routing and I/O”)
 
 - Clip View with Warp Off.
 
   ![Ableton Live — Clip View with Warp Off](../Assets/img/screenshots/ableton-clip-warp-off.png)
 
   Note: TODO — replace with your own screenshot showing the Warp switch disabled for a stem.
+  Source: https://help.ableton.com/hc/en-us/articles/209773265-Warping-in-Live
 
 ## Ableset Work (setlist and control)
 - Open Ableset and connect to Ableton; it reads Scenes as songs.
@@ -106,11 +115,12 @@ Screenshots that help here
 Screenshots that help here
 - Ableset setlist view and MIDI mapping screen.
 
-  ![Ableset — Setlist preview (vendor image)](https://ableset.app/static/social-card-c0638640604c95617d06bf2323e02cc4.jpg)
+  ![Ableset — Setlist preview (vendor image)](../Assets/img/screenshots/ableset-setlist.jpg)
 
   Note: Temporary vendor image for visual context.
   TODO — add and use your own screenshots instead:
   - `../Assets/img/screenshots/ableset-setlist.png`
   - `../Assets/img/screenshots/ableset-midi-mapping.png`
+  Source: https://www.ableset.app/
 
 [Home](../README.md) · [Architecture](architecture.md) · [X Air Routing](xair-routing.md) · [Ultranet](ultranet-routing.md) · [Tracks Prep](tracks-prep.md) · [Operation](operation.md) · [Troubleshooting](troubleshooting.md)

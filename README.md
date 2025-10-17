@@ -3,12 +3,12 @@
 This is the master doc. Use the links below to jump into focused guides.
 
 Start here
-- Overview & concepts: docs/architecture.md
-- X Air routing: docs/xair-routing.md
-- Ultranet routing: docs/ultranet-routing.md
-- Preparing tracks (Logic, Ableton, Ableset): docs/tracks-prep.md
-- Running the show: docs/operation.md
-- Troubleshooting: docs/troubleshooting.md
+- Overview & concepts: [Architecture & Explanation](docs/architecture.md)
+- X Air routing: [X Air Routing](docs/xair-routing.md)
+- Ultranet routing: [Ultranet Routing](docs/ultranet-routing.md)
+- Preparing tracks (Logic, Ableton, Ableset): [Tracks Prep](docs/tracks-prep.md)
+- Running the show: [Operation](docs/operation.md)
+- Troubleshooting: [Troubleshooting](docs/troubleshooting.md)
 
 Hardware & software checklist
 - Mac laptop with Ableton Live and Ableset

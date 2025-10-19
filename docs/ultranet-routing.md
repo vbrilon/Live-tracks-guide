@@ -26,6 +26,21 @@ Notes and variants
 - Avoid duplication: when promoting any instrument to a dedicated channel, remove it from the stems feeding 15–18 so P16 users don’t hear doubles.
  - Drum tracks: if you use mono drums, deliver them on slot 4 (matching ch 4). For stereo drums, use slots 4/5. For multi‑stem drums, keep 1–5 as listed.
 
+Using a Bus to feed P16 (Drums Submix)
+- Why: Save Ultranet slots and give musicians a single “Drums” knob on the P16 instead of multiple drum channels.
+- Pick a free bus (e.g., Bus 6 if Buses 1–5 are used for analog IEMs).
+- On Kick/Snare/Tom/OH channels, raise the send to that bus to create your preferred drum balance.
+- Set the bus Send Tap to Pre‑EQ if you don’t want FOH EQ/faders to affect the P16 submix, or Post‑EQ if you do.
+- Routing → Ultranet: assign an Ultranet slot (e.g., 4) to Source = Bus 6, Tap = Pre‑EQ. Label it “Drums”.
+- Result: P16 shows one channel for the entire drum kit; FOH still gets individual drum channels for mixing.
+
+P16 / IEM enhancements
+- Presets per player: save each musician’s P16 mix as a preset so their balances survive power cycles. Label presets on tape for fast recall.
+- Additional bus submix patterns:
+  - BGV blend bus → one P16 slot (save slots for other needs)
+  - Keys + Pads blend bus → one P16 slot (FOH still receives individual channels if routed that way)
+- Tap trade‑offs: Pre‑EQ taps keep IEMs stable regardless of FOH moves; Post‑EQ taps let FOH tonal changes flow to IEMs—choose per performer preference.
+
 Helpful screenshots
 - Routing → Ultranet grid showing slot sources and Pre‑EQ taps.
 

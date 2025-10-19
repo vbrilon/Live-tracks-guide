@@ -23,6 +23,17 @@ Quick reference
 - Instrument‑swappable (any instrument): keep the same channel number (e.g., Bass → 6, Guitar → 7, Keys → 12; Drums → 1–5 if tracked) and flip XR18 Source (Analog ↔ USB). Remove that instrument from stems to avoid doubles.
 - Drum tracks (no live drummer): mono fallback 4; stereo fallback 4/5
 - Safety: “Main LR” OFF on Click/Cues
+ - IEM safety: taps Pre‑EQ; consider a gentle compressor/limiter on IEM buses
+
+Ultranet tip
+- To save P16 slots, create a mono “Drums” submix on a free bus (e.g., Bus 6) and assign that bus to one Ultranet slot. Musicians get one drum knob while FOH retains individual drum channels.
+
+Break music (between sets)
+- macOS system audio plays on USB 1/2. Create two XR18 Scenes to flip ch 17/18 Source:
+  - Performance Scene: ch 17/18 Source = USB 17/18 (stems)
+  - Break Music Scene: ch 17/18 Source = USB 1/2 (Mac apps like Spotify)
+- Load Break Music Scene for PA music; load Performance Scene before resuming the show.
+ - In the Break Music Scene, set ch 1/2 Source = Analog (or mute ch 1/2) so USB 1/2 only feeds ch 17/18.
 
 TODO
 - Add analog IEM bus variant diagram and routing steps

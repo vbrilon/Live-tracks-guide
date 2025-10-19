@@ -9,6 +9,7 @@ Plain‑language concepts
 - Ableton plays stems (separate audio files per part) plus Click and Cues.
 - Each stem goes to an Ableton output number (e.g., Ext. Out 15) that lands on the identically numbered XR18 channel (ch 15).
 - FOH mixes stems (15–18) to the mains. Click and Cues (13–14) are for IEMs only and must never hit Main LR.
+- macOS system audio typically plays on USB channels 1/2. For break music over the PA, you can temporarily map ch 17/18 to USB 1/2 (via a saved Scene) so the Mac’s apps (Spotify/Apple Music/YouTube) feed your existing stereo faders.
 - IEM options:
   - Ultranet: P16‑M personal mixers get up to 16 channels from the XR18’s Ultranet port.
   - Analog IEM buses: XR18 Buses 1–5 feed Aux Outs 1–5 to your transmitters/amps.

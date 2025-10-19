@@ -22,7 +22,21 @@ Consistency rules (live ↔ tracks)
 Drum tracks variants (no live drummer)
 - Preferred mono: route a single summed Drum track to ch 4 (USB Card 4). Park/mute ch 1, 2, 3, and 5.
 - Stereo option: route `Drums L` → ch 4 and `Drums R` → ch 5. Park/mute ch 1–3.
-- Multi‑stem option: if you exported Kick/Snare/Tom/OH, route them to ch 1–5 respectively (keep Keys/other stems out of 15–18 accordingly).
+  - Multi‑stem option: if you exported Kick/Snare/Tom/OH, route them to ch 1–5 respectively (keep Keys/other stems out of 15–18 accordingly).
+
+Break music via Mac (USB 1/2 → ch 17/18)
+- Goal: play Spotify/Apple Music/YouTube from the Mac over the PA between sets using the existing USB cable.
+- How it works: macOS sends system audio on USB channels 1/2. Temporarily map XR18 ch 17/18 Source to USB (Card 1/2) so your PA receives the Mac audio on the same stereo faders you already use.
+- Steps (create two Scenes for fast switching):
+  - Performance Scene (default for tracks): ch 17 Source = USB (Card 17), ch 18 Source = USB (Card 18).
+  - Break Music Scene: ch 17 Source = USB (Card 1), ch 18 Source = USB (Card 2).
+  - Store both Scenes. Before a break, load Break Music Scene; after the break, load Performance Scene.
+- Notes
+  - Keep ch 13/14 (Click/Cues) out of Main LR at all times.
+  - In the Break Music Scene, set ch 1/2 Source = Analog (or mute 1/2) so USB 1/2 does not also appear on ch 1/2. This avoids duplicating the Mac audio on four faders.
+  - If you plan to use break music regularly, prefer the drums‑on‑4 (mono) or 4/5 (stereo) options when there’s no live drummer. If you must use multi‑stem drums on 1–5, ensure the Break Music Scene flips ch 1/2 to Analog or mutes them during breaks.
+  - Make sure Ableton stems on 17/18 are stopped/muted while Break Music Scene is loaded (to avoid mixing with system audio).
+  - Alternative: use analog Line In 17/18 with a 3.5 mm → dual 1/4" TRS cable if you prefer not to remap USB.
 
 Step‑by‑step in X Air Edit (Mac)
 1) Global
@@ -44,6 +58,7 @@ Step‑by‑step in X Air Edit (Mac)
 3) IEM sends
 - Buses 1–5: set Send Tap = Pre‑EQ (so FOH tweaks don’t change IEMs).
 - Build each performer’s mix by raising sends from the needed channels.
+- Safety: consider a gentle compressor/limiter on each IEM bus (or an inserted limiter FX) to catch peaks. Set thresholds conservatively to avoid pumping.
 
 4) Outputs
 - Aux Out 1–5 → Bus 1–5 (default). Connect to IEM transmitters/amps at line level.

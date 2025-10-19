@@ -38,6 +38,11 @@ Critical rule — channel numbers never change
 - Optional: File → Export → Tempo/Signature (MIDI) as reference. Ableton often ignores MIDI tempo—use audio click/cues for timing in Live.
 - Save into the `Stems/` folder; keep peaks around −6 dBFS for headroom.
 
+Gain staging recipe (stems)
+- Avoid heavy limiting on stems; leave headroom so FOH has room to mix.
+- Target per‑stem peaks around −6 dBFS. If needed, trim/render stems so they’re not clipping.
+- In Ableton, use clip Gain to balance stems so XR18 channel meters sit near 0 dB with faders near unity (−5 to 0 dB). This makes scenes consistent show to show.
+
 Screenshots that help here
 - Smart Tempo/Beat Mapping showing downbeats aligned.
 

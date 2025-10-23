@@ -3,6 +3,7 @@
 This is the master doc. Use the links below to jump into focused guides.
 
 Start here
+- First-time setup: [Getting Started](docs/getting-started.md)
 - Overview & concepts: [Architecture & Explanation](docs/architecture.md)
 - X Air routing: [X Air Routing](docs/xair-routing.md)
 - Ultranet routing: [Ultranet Routing](docs/ultranet-routing.md)

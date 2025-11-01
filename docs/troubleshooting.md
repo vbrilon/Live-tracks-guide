@@ -2,6 +2,8 @@
 
 # Troubleshooting
 
+Summary: Quick fixes for common routing/control issues and a short recovery playbook.
+
 Common issues
 - XR18 not visible in Ableton: try a different USB port/cable; power‑cycle XR18; restart Ableton.
 - No audio on ch 13–18: check Ableton `Audio To` and XR18 Source = USB.
@@ -17,5 +19,7 @@ If problems persist
 - Bypass Ableset and trigger Scenes directly in Ableton.
 - Reboot XR18 (power off/on) and relaunch Ableton with the XR18 connected.
 - Confirm XR18 firmware and X Air Edit versions are current.
+
+Next step: [Operation](operation.md)
 
 [Home](../README.md) · [Getting Started](getting-started.md) · [Architecture](architecture.md) · [X Air Routing](xair-routing.md) · [Ultranet](ultranet-routing.md) · [Tracks Prep](tracks-prep.md) · [Reaper Batch Prep](reaper-batch-prep.md) · [Operation](operation.md) · [Troubleshooting](troubleshooting.md)

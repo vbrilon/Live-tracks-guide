@@ -2,6 +2,8 @@
 
 # Operation (Bringing It All Together)
 
+Summary: Soundcheck and show‑time steps, safe break‑music Scenes, quick reference, and gain/IEM safety notes.
+
 Power‑up and line check
 - Power order: XR18 → connect USB → launch Ableton/Ableset → load set.
 - Verify live mics/instruments (1–12).
@@ -51,5 +53,7 @@ IEM safety
 - Keep bus taps Pre‑EQ for IEMs so FOH tweaks don’t surprise players.
 - Consider a gentle bus compressor/limiter on each IEM bus (or insert a limiter FX) to catch unexpected peaks. Set conservatively to avoid pumping.
 - Verify Click level is comfortable; label Click/Cues clearly and keep them out of mains.
+
+Next step: [Troubleshooting](troubleshooting.md)
 
 [Home](../README.md) · [Getting Started](getting-started.md) · [Architecture](architecture.md) · [X Air Routing](xair-routing.md) · [Ultranet](ultranet-routing.md) · [Tracks Prep](tracks-prep.md) · [Reaper Batch Prep](reaper-batch-prep.md) · [Operation](operation.md) · [Troubleshooting](troubleshooting.md)

@@ -2,6 +2,8 @@
 
 # Architecture & Explanation
 
+Summary: High‑level system flow, routing roles, and prep DAW choices so the rest of the guides make sense in context.
+
 ![System Diagram — Mac ↔ XR18 USB, Ultranet P16‑M](../Assets/img/system-diagram.svg)
 
 Plain‑language concepts
@@ -34,5 +36,7 @@ Terminology (assume no prior knowledge)
 Helpful screenshots to capture
 - X Air Edit → Setup → Audio/MIDI with 48 kHz selected.
 - macOS Audio MIDI Setup showing the XR18 device present.
+
+Next step: [X Air Routing](xair-routing.md)
 
 [Home](../README.md) · [Getting Started](getting-started.md) · [Architecture](architecture.md) · [X Air Routing](xair-routing.md) · [Ultranet](ultranet-routing.md) · [Tracks Prep](tracks-prep.md) · [Reaper Batch Prep](reaper-batch-prep.md) · [Operation](operation.md) · [Troubleshooting](troubleshooting.md)

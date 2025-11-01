@@ -2,6 +2,8 @@
 
 # X Air Routing (XR18)
 
+Summary: Recommended XR18 channel map, safe Source settings, IEM sends, and “Break Music” Scenes that flip USB 1/2 to ch 17/18 between sets.
+
 Recommended channel map
 - 1 Kick, 2 Snare, 3 Tom, 4 OH L, 5 OH R
 - 6 Bass DI, 7 Guitar
@@ -92,5 +94,7 @@ Helpful screenshots
 
   Note: TODO — replace with your own screenshot.
   Reference manual (PDF): https://usermanual.wiki/Document/XAIREditOperationManual.790879087.pdf
+
+Next step: [Ultranet Routing](ultranet-routing.md)
 
 [Home](../README.md) · [Getting Started](getting-started.md) · [Architecture](architecture.md) · [X Air Routing](xair-routing.md) · [Ultranet](ultranet-routing.md) · [Tracks Prep](tracks-prep.md) · [Reaper Batch Prep](reaper-batch-prep.md) · [Operation](operation.md) · [Troubleshooting](troubleshooting.md)

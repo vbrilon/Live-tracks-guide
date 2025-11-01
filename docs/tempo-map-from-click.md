@@ -2,6 +2,8 @@
 
 # Tempo Map From Click (Automatic)
 
+Summary: Build tempo.mid from click audio so a DAW’s bar/beat grid matches the song; place cues/MIDI precisely, then export audio cues for Ableton.
+
 Goal: Build a tempo map (tempo.mid) from each song’s click audio so your DAW’s bar/beat grid aligns exactly. This lets you place cues and MIDI on the grid quickly, then export audio cues for Ableton.
 
 Two paths
@@ -57,3 +59,5 @@ Author cues on the grid
 
 Next steps
 - Drop `14_Cues.wav` into each song’s `Stems` and continue with the bulk import into Ableton Session.
+
+Next step: [Tracks Prep](tracks-prep.md)

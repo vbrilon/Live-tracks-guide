@@ -2,6 +2,8 @@
 
 # Reaper Batch Prep (Optional, For Large Catalogs)
 
+Summary: Use Reaper + SWS to tempo‑map many songs, place regions/markers, and batch render click/cues/stems with consistent naming.
+
 Reaper excels when you need to prepare many songs quickly and consistently. With SWS Extensions, you can tempo‑map, place markers/regions, and batch‑render click, cues, and stems for dozens of songs in one pass with standardized filenames.
 
 ## Why choose Reaper instead of Logic
@@ -68,7 +70,8 @@ Consider Logic or Ableton‑only when
 - Provide a Reaper template project (`.RPP`) with tracks pre‑named (`13_Click`, `14_Cues`, `15_TracksA`, etc.), a basic click source, and Region Render Matrix presets.
 - Include a wildcard/naming cheatsheet and suggested Render settings.
 - Short SWS action list to accelerate common steps (e.g., create regions from markers, warp grid to item, batch marker utilities).
-- A 10‑minute starter walkthrough: from importing an MP3 to batch rendering click/cues/stems for 3 songs.
+ - A 10‑minute starter walkthrough: from importing an MP3 to batch rendering click/cues/stems for 3 songs.
+
+Next step: [Tracks Prep](tracks-prep.md)
 
 [Home](../README.md) · [Getting Started](getting-started.md) · [Architecture](architecture.md) · [X Air Routing](xair-routing.md) · [Ultranet](ultranet-routing.md) · [Tracks Prep](tracks-prep.md) · [Reaper Batch Prep](reaper-batch-prep.md) · [Operation](operation.md) · [Troubleshooting](troubleshooting.md)
-

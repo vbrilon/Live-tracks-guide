@@ -1,5 +1,7 @@
 # Live Backing Tracks with XR18 + Ableton (Mac)
 
+Summary: Master index for a complete, reliable live‑tracks workflow on XR18 with Ableton + Ableset, plus automation and advanced prep options.
+
 This is the master doc. Use the links below to jump into focused guides.
 
 Start here

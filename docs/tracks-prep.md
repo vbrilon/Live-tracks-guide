@@ -2,6 +2,8 @@
 
 # How To Prepare Tracks For Live Use
 
+Summary: Organize files, understand when Logic/Ableton/Reaper fit, and build stems, cues, and routing so songs import cleanly into Ableton Session.
+
 File organization and naming
 - `LiveTracks/Songs/<SongName>/Stems/` — WAV stems (48 kHz / 24‑bit)
 - `LiveTracks/Songs/<SongName>/MIDI/` — optional tempo/marker MIDI (reference only)
@@ -182,5 +184,7 @@ Benefits
 
 Notes
 - Reaper’s power comes with a learning curve. Consider this path when onboarding a large catalog; for single songs or simple sets, Logic or Ableton‑only may be faster.
+
+Next step: [Automation (Bulk Import)](automation-bulk-import.md)
 
 [Home](../README.md) · [Getting Started](getting-started.md) · [Architecture](architecture.md) · [X Air Routing](xair-routing.md) · [Ultranet](ultranet-routing.md) · [Tracks Prep](tracks-prep.md) · [Reaper Batch Prep](reaper-batch-prep.md) · [Operation](operation.md) · [Troubleshooting](troubleshooting.md)

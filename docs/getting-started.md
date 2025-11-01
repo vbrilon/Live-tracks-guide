@@ -2,13 +2,13 @@
 
 # Getting Started (Ableton Live + Ableset)
 
-This guide assumes no prior experience with Ableton Live or Ableset. It walks you from an empty project to a basic show you can control from an iPad.
+Summary: First‑time setup for Ableton + Ableset to build a basic show, with iPad remote and optional MIDI Out track.
 
 ## Part A — Ableton Live: Your First Live Set
 
 1) Install and launch
 - Install Ableton Live on your Mac and open it.
-- If prompted for audio, skip for now; we’ll set it in Preferences.
+- If prompted for audio, skip for now; set it in Preferences.
 
 2) Configure audio
 - Open Preferences → Audio.
@@ -158,5 +158,7 @@ Screenshots to add
 6) Emergency 2‑track backup
 - Keep a stereo mixdown of each song routed to `Ext. Out 17/18`.
 - If stems fail, mute Tracks 1–4 and fire the stereo mix clips on 17/18.
+
+Next step: [Tracks Prep](tracks-prep.md)
 
 [Home](../README.md) · [Getting Started](getting-started.md) · [Architecture](architecture.md) · [X Air Routing](xair-routing.md) · [Ultranet](ultranet-routing.md) · [Tracks Prep](tracks-prep.md) · [Reaper Batch Prep](reaper-batch-prep.md) · [Operation](operation.md) · [Troubleshooting](troubleshooting.md)

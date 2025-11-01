@@ -2,6 +2,8 @@
 
 # Ultranet Routing (XR18 → P16‑M)
 
+Summary: Map XR18 sources to Ultranet slots for P16‑M mixers, with options to save slots via bus submixes and preserve channel consistency.
+
 Ultranet carries 16 mono channels to personal mixers. Assign XR18 sources to Ultranet slots so each musician builds their own IEM mix without FOH changes affecting them.
 
 How to assign
@@ -48,5 +50,7 @@ Helpful screenshots
 
   Note: TODO — replace with your own screenshot (Routing → Ultranet).
   Reference manual (PDF): https://usermanual.wiki/Document/XAIREditOperationManual.790879087.pdf
+
+Next step: [Tracks Prep](tracks-prep.md)
 
 [Home](../README.md) · [Getting Started](getting-started.md) · [Architecture](architecture.md) · [X Air Routing](xair-routing.md) · [Ultranet](ultranet-routing.md) · [Tracks Prep](tracks-prep.md) · [Reaper Batch Prep](reaper-batch-prep.md) · [Operation](operation.md) · [Troubleshooting](troubleshooting.md)

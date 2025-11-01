@@ -3,6 +3,8 @@
 
 # Automation: Bulk Import MP3 Song Folders → Ableton Scenes
 
+Summary: Convert per‑song MP3 folders into standardized 48k/24‑bit stems and import them rapidly into Ableton as one Scene per song.
+
 Goal: You have ~30 songs in `~/Dropbox/Song_Tracks/<SongName>/*.mp3`, one file per instrument plus a click track (all aligned). This automation builds standard 48k/24‑bit WAV stems (Click, Cues, Tracks A–D) for each song, then imports them into a single Ableton set (one Scene per song).
 
 Outcome
@@ -80,4 +82,6 @@ Optional: automate the import (Keyboard Maestro)
 - Wrong files in A/B/C/D: tune `tools/keywords.yml` and re‑run.
 - Clipping or low level: stems use amix normalization + limiter; adjust per‑stem clip gain in Ableton as needed.
 - Timing drift: ensure Auto‑Warp is off; if the source MP3 drifts, consider the Logic/Reaper tempo map route to print a more reliable click/cues.
-- Need a bar‑aligned grid to place cues/MIDI? Generate `tempo.mid` from the click first: see [Tempo Map From Click](tempo-map-from-click.md).
+ - Need a bar‑aligned grid to place cues/MIDI? Generate `tempo.mid` from the click first: see [Tempo Map From Click](tempo-map-from-click.md).
+
+Next step: [Operation](operation.md)

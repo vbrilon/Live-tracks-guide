@@ -11,7 +11,7 @@ File organization and naming
   - Optional dedicates: `06_Bass.wav`, `07_Guitar.wav`, `12_Keys.wav`, `08_LeadVox.wav`
   - Drums multi‑stem: `01_Kick.wav`, `02_Snare.wav`, `03_Tom.wav`, `04_OH_L.wav`, `05_OH_R.wav`
   - Drums mono fallback: `04_Drums.wav`
-- Drums stereo fallback: `04_Drums_L.wav`, `05_Drums_R.wav`
+  - Drums stereo fallback: `04_Drums_L.wav`, `05_Drums_R.wav`
 
 Critical rule — channel numbers never change
 - For any instrument: keep the same channel number whether it’s live or from tracks. Route Ableton to the live channel’s number and flip the XR18 channel Source (Analog ↔ USB).
@@ -151,7 +151,7 @@ Screenshots that help here
   Note: Temporary vendor image for visual context.
   TODO — add and use your own screenshots instead:
   - `../Assets/img/screenshots/ableset-setlist.png`
-- `../Assets/img/screenshots/ableset-midi-mapping.png`
+  - `../Assets/img/screenshots/ableset-midi-mapping.png`
   Source: https://www.ableset.app/
 
 ## Reaper For Large Catalogs (optional, faster at scale)

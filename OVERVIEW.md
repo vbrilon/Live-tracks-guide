@@ -21,7 +21,7 @@ A beginner‑friendly, reliable workflow to run live backing tracks from a Mac i
     - Break Music: ch 17/18 Source = USB 1/2 (Mac apps)
   - In Break Scene, set ch 1/2 Source = Analog (or mute) so USB 1/2 only feeds ch 17/18.
 - IEM buses: Use Pre‑EQ taps for Buses 1–5. Consider a gentle limiter/comp on each IEM bus.
-- P16/Ulnet: 16 mono slots. Recommended map includes live channels, Click 11, Cues 12, Stems A–D on 13–16. You can feed a “Drums” submix to one Ultranet slot via a spare bus.
+- P16/Ultranet: 16 mono slots. Recommended map includes live channels, Click 11, Cues 12, Stems A–D on 13–16. You can feed a “Drums” submix to one Ultranet slot via a spare bus.
 
 ## Repo Structure (docs)
 - `README.md` — Master index. Quick reference + links.
@@ -120,4 +120,3 @@ A beginner‑friendly, reliable workflow to run live backing tracks from a Mac i
 ## Git Remote
 - Origin: GitHub `git@github.com:vbrilon/Live-tracks-guide.git`
 - Default branch: `main`
-

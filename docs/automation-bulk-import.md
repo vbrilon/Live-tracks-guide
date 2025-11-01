@@ -73,11 +73,11 @@ Optional: automate the import (Keyboard Maestro)
 
 - Dedicated channels (6, 7, 12): If a live player is missing, add dedicated Ableton tracks for Bass (6), Guitar (7), Keys (12). Remove that instrument from A–D so it isn’t doubled, and route its track to the dedicated output.
 - Drum tracks mono/stereo: If you want a mono drum stem on ch 4 or stereo on 4/5 (no live drummer), render those variants with the `tools/build_stems.py` by mapping drum files to C and retargeting. Or use the Reaper Batch Prep pipeline to generate 1–5 multi‑stems if needed.
- - MIDI batch naming: Keep per‑song MIDI files as `<SongName>.mid` inside each `Stems/` or song folder to speed drag‑in to the `MIDI Out` track.
+- MIDI batch naming: Keep per‑song MIDI files as `<SongName>.mid` inside each `Stems/` or song folder to speed drag‑in to the `MIDI Out` track.
 
 ## Troubleshooting
 
 - Wrong files in A/B/C/D: tune `tools/keywords.yml` and re‑run.
 - Clipping or low level: stems use amix normalization + limiter; adjust per‑stem clip gain in Ableton as needed.
 - Timing drift: ensure Auto‑Warp is off; if the source MP3 drifts, consider the Logic/Reaper tempo map route to print a more reliable click/cues.
- - Need a bar‑aligned grid to place cues/MIDI? Generate `tempo.mid` from the click first: see [Tempo Map From Click](tempo-map-from-click.md).
+- Need a bar‑aligned grid to place cues/MIDI? Generate `tempo.mid` from the click first: see [Tempo Map From Click](tempo-map-from-click.md).

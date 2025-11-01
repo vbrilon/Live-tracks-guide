@@ -22,7 +22,7 @@ Consistency rules (live ↔ tracks)
 Drum tracks variants (no live drummer)
 - Preferred mono: route a single summed Drum track to ch 4 (USB Card 4). Park/mute ch 1, 2, 3, and 5.
 - Stereo option: route `Drums L` → ch 4 and `Drums R` → ch 5. Park/mute ch 1–3.
-  - Multi‑stem option: if you exported Kick/Snare/Tom/OH, route them to ch 1–5 respectively (keep Keys/other stems out of 15–18 accordingly).
+- Multi‑stem option: if you exported Kick/Snare/Tom/OH, route them to ch 1–5 respectively (keep Keys/other stems out of 15–18 accordingly).
 
 Break music via Mac (USB 1/2 → ch 17/18)
 - Goal: play Spotify/Apple Music/YouTube from the Mac over the PA between sets using the existing USB cable.

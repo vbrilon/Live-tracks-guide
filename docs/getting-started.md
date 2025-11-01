@@ -1,4 +1,4 @@
-[Home](../README.md) · [Getting Started](getting-started.md) · [Architecture](architecture.md) · [X Air Routing](xair-routing.md) · [Ultranet](ultranet-routing.md) · [Tracks Prep](tracks-prep.md) · [Operation](operation.md) · [Troubleshooting](troubleshooting.md)
+[Home](../README.md) · [Getting Started](getting-started.md) · [Architecture](architecture.md) · [X Air Routing](xair-routing.md) · [Ultranet](ultranet-routing.md) · [Tracks Prep](tracks-prep.md) · [Reaper Batch Prep](reaper-batch-prep.md) · [Operation](operation.md) · [Troubleshooting](troubleshooting.md)
 
 # Getting Started (Ableton Live + Ableset)
 
@@ -45,6 +45,14 @@ Screenshots to add
 - For each clip: open Clip View and turn Warp Off. Adjust clip Gain to taste.
 - Rename the Scene: `01 <SongName>`.
 
+5) Add more songs (multi‑song set)
+- Repeat step 4 for each additional song: one Scene (row) per song using the same tracks.
+- Rename Scenes with leading numbers so they sort cleanly: `02 <Song2>`, `03 <Song3>`, etc.
+- Color‑code each song’s clips consistently (e.g., all clips in a song share a color) to avoid misfires during the show.
+- Stop buttons: right‑click empty clip slots in your tracks and choose “Stop” (or enable Stop buttons) so launching one song’s Scene doesn’t accidentally stop another track.
+- Global Quantization: set to 1 Bar (top center of Live). This ensures smooth starts/stops and transitions when launching Scenes.
+- Optional: add Section markers in Ableset (Part B) rather than using Follow Actions; for tempo‑changing content keep timing authoritative in audio (click/cues), not warped automation.
+
 Screenshots to add
 - Clip View with Warp Off: `../Assets/img/screenshots/ableton-clip-warp-off.png` (TODO add)
 - Session View with scenes labeled: `../Assets/img/screenshots/ableton-session-scenes.png` (TODO add)
@@ -59,6 +67,39 @@ Screenshots to add
 Tips
 - Color‑code each song’s clips; keep a consistent color legend.
 - Use “Stop” buttons to prevent empty slots from stopping other clips.
+
+Session vs Arrangement (what to use here)
+- This workflow uses Session View (grid) to trigger songs as Scenes. Arrangement View is great for linear editing, but for live playback Session View is simpler and safer.
+
+Screenshots to add
+- Session View with multiple songs (Scenes) and Global Quantization visible: `../Assets/img/screenshots/ableton-multi-scenes.png` (TODO add)
+
+## Optional — Add a MIDI Out Track (testing / program changes)
+
+Goal: Play a per‑song MIDI clip alongside the audio to test lights, keys changes, program changes, or outboard.
+
+1) Enable a virtual MIDI port (macOS)
+- Open `Audio MIDI Setup` → `Window` → `Show MIDI Studio`.
+- Double‑click `IAC Driver` → check `Device is online` → apply.
+
+2) Ableton MIDI prefs
+- Preferences → Link/MIDI: under `MIDI Ports`, enable `Track` and `Remote` for `IAC Driver (Bus 1)` Output.
+
+3) Create a `MIDI Out` track
+- Add a MIDI track named `MIDI Out`.
+- Set `MIDI To` → `IAC Driver (Bus 1)` → Channel as needed (e.g., 1). For hardware, choose your external MIDI interface instead.
+
+4) Per‑song MIDI clip
+- For each song, drag its MIDI file (e.g., `<SongName>.mid`) into the `MIDI Out` clip slot in the same Scene row as the audio.
+- Set Global Quantization to 1 Bar so the MIDI and audio start together when the Scene is launched.
+
+Notes
+- Variable‑tempo songs: Session Scenes don’t carry a tempo envelope (one BPM per Scene only). If your MIDI must follow a changing tempo (e.g., arps), author/export that part to audio or run the song from Arrangement (with a Master tempo envelope). Program changes and one‑shots are typically fine in Session.
+- For synth testing: add an `External Instrument` device on the `MIDI Out` track to monitor return audio if desired.
+
+Screenshots to add
+- IAC Driver enabled: `../Assets/img/screenshots/macos-iac.png` (TODO add)
+- Ableton MIDI Ports (IAC Output Track/Remote ON): `../Assets/img/screenshots/ableton-midi-ports.png` (TODO add)
 
 ## Part B — Ableset: Setlist + Remote Control (iPad)
 
@@ -118,5 +159,4 @@ Screenshots to add
 - Keep a stereo mixdown of each song routed to `Ext. Out 17/18`.
 - If stems fail, mute Tracks 1–4 and fire the stereo mix clips on 17/18.
 
-[Home](../README.md) · [Getting Started](getting-started.md) · [Architecture](architecture.md) · [X Air Routing](xair-routing.md) · [Ultranet](ultranet-routing.md) · [Tracks Prep](tracks-prep.md) · [Operation](operation.md) · [Troubleshooting](troubleshooting.md)
-
+[Home](../README.md) · [Getting Started](getting-started.md) · [Architecture](architecture.md) · [X Air Routing](xair-routing.md) · [Ultranet](ultranet-routing.md) · [Tracks Prep](tracks-prep.md) · [Reaper Batch Prep](reaper-batch-prep.md) · [Operation](operation.md) · [Troubleshooting](troubleshooting.md)

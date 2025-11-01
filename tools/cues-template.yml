@@ -1,0 +1,14 @@
+# Example per-song cues file (place as LiveTracks/Songs/<SongName>/cues.yml)
+# Times are mm:ss(.mmm); voice is any macOS voice (e.g., Samantha, Alex, etc.)
+
+voice: Samantha
+events:
+  - at: "0:02.000"
+    text: "Intro — two three four"
+  - at: "0:15.000"
+    text: "Verse"
+  - at: "0:45.000"
+    text: "Chorus"
+  - at: "1:15.000"
+    text: "Bridge"
+

@@ -1,0 +1,52 @@
+# Override or extend keyword classification per your naming.
+# Keys: click, cues, A, B, C, D
+# Values: list of regex (case-insensitive)
+
+click:
+  - "click"
+
+cues:
+  - "cue"
+  - "cues"
+  - "guide"
+  - "count"
+  - "vox.?cue"
+
+A: # Perc/Loops/Drums
+  - "drum"
+  - "perc"
+  - "loop"
+  - "shaker"
+  - "tamb"
+  - "clap"
+  - "kick"
+  - "snare"
+  - "tom"
+  - "oh|overhead"
+  - "hihat|hi.?hat"
+  - "cym"
+  - "808|909"
+
+B: # Synth/Bass/Guitar/Lead
+  - "bass"
+  - "synth[-_ ]?bass"
+  - "gtr|guitar"
+  - "lead"
+  - "mono"
+  - "arp"
+
+C: # Keys/Pads
+  - "keys?"
+  - "pad"
+  - "piano"
+  - "rhodes"
+  - "organ"
+  - "strings"
+  - "synth\s*pad"
+
+D: # BGV/FX
+  - "bgv|back(ing)?.?vox"
+  - "harm|harmony|choir"
+  - "fx|sfx"
+  - "swell|stab"
+

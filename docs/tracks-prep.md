@@ -1,4 +1,4 @@
-[Home](../README.md) · [Architecture](architecture.md) · [X Air Routing](xair-routing.md) · [Ultranet](ultranet-routing.md) · [Tracks Prep](tracks-prep.md) · [Operation](operation.md) · [Troubleshooting](troubleshooting.md)
+[Home](../README.md) · [Getting Started](getting-started.md) · [Architecture](architecture.md) · [X Air Routing](xair-routing.md) · [Ultranet](ultranet-routing.md) · [Tracks Prep](tracks-prep.md) · [Reaper Batch Prep](reaper-batch-prep.md) · [Operation](operation.md) · [Troubleshooting](troubleshooting.md)
 
 # How To Prepare Tracks For Live Use
 
@@ -11,12 +11,31 @@ File organization and naming
   - Optional dedicates: `06_Bass.wav`, `07_Guitar.wav`, `12_Keys.wav`, `08_LeadVox.wav`
   - Drums multi‑stem: `01_Kick.wav`, `02_Snare.wav`, `03_Tom.wav`, `04_OH_L.wav`, `05_OH_R.wav`
   - Drums mono fallback: `04_Drums.wav`
-  - Drums stereo fallback: `04_Drums_L.wav`, `05_Drums_R.wav`
+- Drums stereo fallback: `04_Drums_L.wav`, `05_Drums_R.wav`
 
 Critical rule — channel numbers never change
 - For any instrument: keep the same channel number whether it’s live or from tracks. Route Ableton to the live channel’s number and flip the XR18 channel Source (Analog ↔ USB).
 - Examples: Bass → ch 6, Guitar → ch 7, Keys → ch 12. If running drum tracks, route Kick/Snare/Tom/OH to ch 1–5 and remove drums from stems feeding 15–18.
 - Avoid duplication: when you promote an instrument to a dedicated channel, remove it from the stems so it isn’t doubled in FOH or IEMs.
+
+## Why Logic Is In The Flow (and when to skip it)
+
+Logic is excellent at preparing songs that didn’t start life as clean stems on a steady click.
+
+- Smart Tempo: Quickly adapts a drifting MP3 or live recording to a reliable tempo map (downbeats, tempo/time signature changes).
+- Audio click and cues: You print a click and vocal cues aligned to the bar/beat grid. Ableton then follows these audio references unwarped.
+- Arrangement clarity: Global Tracks and arrangement markers make it easy to place cues at precise musical moments.
+- Avoids MIDI tempo import pitfalls: Ableton does not reliably import tempo from MIDI; keeping timing authoritative in audio (click/cues) is safer live.
+
+Use Logic when
+- The source is a stereo mix/MP3 with drift or rubato.
+- You need tight musical cues or complex meter/tempo changes.
+- You want repeatable exports (48 kHz/24‑bit) with tidy names per the channel plan.
+
+Skip Logic (Ableton‑only) when
+- You already have on‑grid stems at 48 kHz.
+- The song is steady‑tempo and needs minimal editing.
+- Fast path in Ableton: disable Auto‑Warp, create Click/Cues (use samples or a printed metronome), drop stems into a Scene, set `Audio To` outputs (13–18, and any 6/7/12 dedicates), Warp Off, balance clip Gain, save.
 
 ## Logic Work (tempo map, click, cues, export)
 1) Project setup
@@ -79,6 +98,13 @@ Screenshots that help here
   - Stereo drums: add `Drums L` → `Ext. Out 4`, `Drums R` → `Ext. Out 5`.
   - Multi‑stem drums: add `Kick` → 1, `Snare` → 2, `Tom` → 3, `OH L` → 4, `OH R` → 5.
 
+MIDI Out (optional)
+- Add a MIDI track named `MIDI Out`.
+- Preferences → Link/MIDI: enable `Track` and `Remote` for `IAC Driver (Bus 1)` Output (macOS), or select your external MIDI interface.
+- Set `MIDI To` → `IAC Driver (Bus 1)` (Channel 1, or as needed).
+- Per song, drag `<SongName>.mid` into the `MIDI Out` clip slot in the same Scene row as the audio.
+- Keep Global Quantization at 1 Bar so the MIDI clip launches in sync with the Scene.
+
 3) Import stems per song
 - Drag each song’s stems into a new Scene (one row per song).
 - For every clip: turn Warp Off, set clip Gain for balance, color code.
@@ -125,7 +151,36 @@ Screenshots that help here
   Note: Temporary vendor image for visual context.
   TODO — add and use your own screenshots instead:
   - `../Assets/img/screenshots/ableset-setlist.png`
-  - `../Assets/img/screenshots/ableset-midi-mapping.png`
+- `../Assets/img/screenshots/ableset-midi-mapping.png`
   Source: https://www.ableset.app/
 
-[Home](../README.md) · [Architecture](architecture.md) · [X Air Routing](xair-routing.md) · [Ultranet](ultranet-routing.md) · [Tracks Prep](tracks-prep.md) · [Operation](operation.md) · [Troubleshooting](troubleshooting.md)
+## Reaper For Large Catalogs (optional, faster at scale)
+
+Why Reaper
+- With SWS Extensions, Reaper excels at batch workflows: tempo mapping many songs, adding markers/regions, and mass rendering click/cues/stems in one pass via the Render Matrix.
+
+High‑level workflow
+1) Setup
+- Install Reaper + SWS. Set project sample rate to 48 kHz.
+
+2) Import songs and map tempo
+- One song per project tab (or use regions in one project). Use tempo mapping tools to align downbeats and meter changes. Add region/markers for sections (Intro/Verse/Chorus/Bridge).
+
+3) Build click and cues
+- Add a dedicated Click track (accent bar 1). Add a Cues track with spoken prompts aligned to markers.
+
+4) Batch render
+- Use the Render Matrix to export per‑song assets (Click, Cues, and any stems) at 48 kHz/24‑bit with standardized names (e.g., `13_Click.wav`, `14_Cues.wav`, `15_TracksA.wav`, …).
+- Render to `LiveTracks/Songs/<SongName>/Stems/`.
+
+5) Assemble in Ableton
+- In Ableton, disable Auto‑Warp, create the standard tracks and outputs, and drag in each song’s stems to a Scene. Keep click/cues as audio; do not rely on Live’s metronome for tempo‑changing songs.
+
+Benefits
+- Speed: Prepare dozens of songs with consistent naming in one batch.
+- Reliability: Audio click/cues keep timing consistent regardless of DAW tempo import quirks.
+
+Notes
+- Reaper’s power comes with a learning curve. Consider this path when onboarding a large catalog; for single songs or simple sets, Logic or Ableton‑only may be faster.
+
+[Home](../README.md) · [Getting Started](getting-started.md) · [Architecture](architecture.md) · [X Air Routing](xair-routing.md) · [Ultranet](ultranet-routing.md) · [Tracks Prep](tracks-prep.md) · [Reaper Batch Prep](reaper-batch-prep.md) · [Operation](operation.md) · [Troubleshooting](troubleshooting.md)

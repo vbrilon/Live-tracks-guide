@@ -8,6 +8,9 @@ Start here
 - X Air routing: [X Air Routing](docs/xair-routing.md)
 - Ultranet routing: [Ultranet Routing](docs/ultranet-routing.md)
 - Preparing tracks (Logic, Ableton, Ableset): [Tracks Prep](docs/tracks-prep.md)
+- Bulk import from MP3 folders: [Automation (Bulk Import)](docs/automation-bulk-import.md)
+- Generate tempo maps from click: [Tempo Map From Click](docs/tempo-map-from-click.md)
+- Batch prep at scale: [Reaper Batch Prep](docs/reaper-batch-prep.md)
 - Running the show: [Operation](docs/operation.md)
 - Troubleshooting: [Troubleshooting](docs/troubleshooting.md)
 

@@ -1,4 +1,4 @@
-[Home](../README.md) · [Architecture](architecture.md) · [X Air Routing](xair-routing.md) · [Ultranet](ultranet-routing.md) · [Tracks Prep](tracks-prep.md) · [Operation](operation.md) · [Troubleshooting](troubleshooting.md)
+[Home](../README.md) · [Getting Started](getting-started.md) · [Architecture](architecture.md) · [X Air Routing](xair-routing.md) · [Ultranet](ultranet-routing.md) · [Tracks Prep](tracks-prep.md) · [Reaper Batch Prep](reaper-batch-prep.md) · [Operation](operation.md) · [Troubleshooting](troubleshooting.md)
 
 # Architecture & Explanation
 
@@ -17,6 +17,11 @@ Plain‑language concepts
 Channel consistency principle (must do)
 - For any instrument you swap from live to backing (or back), keep the same XR18 channel number. Route Ableton to that channel’s number and flip the channel Source (Analog ↔ USB). This keeps FOH workflow, IEM sends, and Ultranet slots consistent.
 
+Prep DAW choices (overview)
+- Logic Pro (recommended when songs drift): best for Smart Tempo, printed audio click/cues, and precise markers. Use this when the source is an MP3 or has tempo/meter changes.
+- Ableton‑only (fast path): fine for steady‑tempo songs or when stems are already on‑grid at 48 kHz. Disable Auto‑Warp; keep timing authoritative in audio.
+- Reaper + SWS (bulk prep): most efficient for large catalogs. Batch tempo mapping, markers/regions, and Render Matrix for naming/exports; then assemble in Ableton and control with Ableset.
+
 Why 48 kHz and a 128–256 buffer?
 - XR18 defaults to 48 kHz. Keep everything at 48 kHz to avoid resampling and clock issues.
 - 128–256 buffer is a good live balance: low latency but stable. If you hear pops/clicks, try 256.
@@ -30,4 +35,4 @@ Helpful screenshots to capture
 - X Air Edit → Setup → Audio/MIDI with 48 kHz selected.
 - macOS Audio MIDI Setup showing the XR18 device present.
 
-[Home](../README.md) · [Architecture](architecture.md) · [X Air Routing](xair-routing.md) · [Ultranet](ultranet-routing.md) · [Tracks Prep](tracks-prep.md) · [Operation](operation.md) · [Troubleshooting](troubleshooting.md)
+[Home](../README.md) · [Getting Started](getting-started.md) · [Architecture](architecture.md) · [X Air Routing](xair-routing.md) · [Ultranet](ultranet-routing.md) · [Tracks Prep](tracks-prep.md) · [Reaper Batch Prep](reaper-batch-prep.md) · [Operation](operation.md) · [Troubleshooting](troubleshooting.md)

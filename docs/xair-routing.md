@@ -40,6 +40,77 @@ Break music via Mac (USB 1/2 → ch 17/18)
   - Make sure Ableton stems on 17/18 are stopped/muted while Break Music Scene is loaded (to avoid mixing with system audio).
   - Alternative: use analog Line In 17/18 with a 3.5 mm → dual 1/4" TRS cable if you prefer not to remap USB.
 
+## Buses 101 (Aux Mixes on XR18)
+
+Concept
+- A Bus is an independent mix separate from Main LR. On XR18, Buses 1–6 are typically used for IEM/wedge mixes, submixes (e.g., "Drums"), a stream/broadcast mix, or feeding personal mixers (via Ultranet) with a single blended source.
+- Every channel has a send level to each Bus. You decide how much of each channel goes to a Bus, and the “tap point” determines whether FOH fader/EQ changes affect that Bus.
+
+Tap points (per‑send)
+- Pre‑EQ: the send happens before EQ, comp, and fader. Best for IEMs so FOH tweaks don’t surprise players.
+- Pre‑Fader: after EQ/dynamics, before fader. Useful if you want FOH tone to carry to IEMs but not fader rides.
+- Post‑Fader: follows FOH fader/EQ/dynamics. Common for FX sends or a broadcast mix that should follow FOH moves.
+
+Typical uses
+- IEM mixes: one Bus per musician (mono). Link adjacent Buses for stereo IEM (e.g., link Bus 1–2, 3–4). Keep sends Pre‑EQ for stability.
+- Personal mixers (P16): save Ultranet slots by feeding a Bus submix (e.g., a “Drums” Bus) to one Ultranet slot. See Ultranet Routing.
+- Click/Cues control: Keep ch 13/14 out of Main LR, but send them to IEM Buses so performers hear them.
+- Stream/broadcast: dedicate a Bus for a separate mix, often with light bus compression and Post‑Fader taps to follow FOH.
+- Effects: XR18 has internal FX with their own sends/returns; for simple use keep FX sends Post‑Fader so FX follow FOH levels.
+
+Ultranet vs Buses for IEMs
+- If you use P16‑M personal mixers over Ultranet, those musicians do NOT need separate IEM Buses on the XR18. Their IEMs plug into the P16‑M headphone amp (or the P16‑M line out can feed a wireless IEM transmitter).
+- Mixed rigs are common: some players on P16 (Ultranet, no Bus), others on analog IEMs/wedges (use Bus 1–5 via Aux Outs).
+- You can still use a Bus to create a submix that feeds one Ultranet slot (e.g., a single “Drums” slot) to save Ultranet channels.
+
+Setup in X Air Edit (mixing a Bus)
+1) Name and link (if stereo)
+- On the Bus master, name it (e.g., “IEM Drummer”). To create a stereo IEM, link a pair (1↔2, 3↔4, or 5↔6) and pan channels per musician preference.
+2) Choose tap
+- In the Bus Sends options, set the send tap to Pre‑EQ for IEMs.
+3) Mix with “Sends on Faders”
+- Press Sends‑on‑Faders for the target Bus. Now the channel faders represent that Bus’s send levels—mix the performer’s balance here.
+4) Route outputs
+- Routing → Aux Out: map Aux Out 1–6 to Bus 1–6 respectively (default). Connect Aux Out jacks to IEM transmitters/amps.
+5) Add protection
+- On each IEM Bus, consider a gentle compressor/limiter to catch peaks. Keep thresholds conservative.
+6) Save
+- Store a Scene once your Buses are dialed.
+
+Example layout
+- Bus 1: Drummer IEM (mono)
+- Bus 2: Bass IEM (mono)
+- Bus 3: Guitar IEM (mono)
+- Bus 4: Lead Vox IEM (mono)
+- Bus 5: Keys IEM (mono)
+- Bus 6: “Drums” submix to Ultranet slot 4 (saves P16 slots)
+
+How this ties to the rest of the guide
+- Tracks output: Ableton feeds ch 13–18; your IEM Buses choose how much of each to include. Click/Cues (13/14) have Main LR OFF but should be present in IEM Buses as needed.
+- Ultranet: You can feed Ultranet slots directly from channels or from a Bus (e.g., a “Drums” Bus). See [Ultranet Routing](ultranet-routing.md).
+- Operation: During soundcheck, use Sends‑on‑Faders to build each musician’s Bus mix. See [Operation](operation.md).
+
+Walkthrough (PC) — Create a mono IEM Bus
+- Connect X Air Edit (Windows) to the XR18.
+- Select Bus 1 (Bus master strip), click its name, and rename (e.g., “IEM Drummer”).
+- On any input channel, open the Sends tab; ensure the Bus 1 send tap is Pre‑EQ. Repeat for channels you’ll include in the IEM mix.
+- Press “Sends on Faders” and select Bus 1. Use the channel faders to build the drummer’s mix (raise Click 13, Cues 14, vocal/instrument channels as needed).
+- Routing → Aux Out: confirm Aux Out 1 = Bus 1. Physically connect Aux Out 1 to the drummer’s IEM transmitter/amp.
+- Optional safety: on Bus 1, enable light compression (bus Dynamics) or insert a limiter FX.
+- Store a Scene.
+
+Walkthrough (PC) — Create a stereo IEM Bus
+- Link Bus 1–2 as a stereo pair (select Bus 1, enable Link). Rename (e.g., “IEM Guitar (Stereo)”).
+- Press “Sends on Faders” for Bus 1/2; pan each channel’s send for the musician’s preference.
+- Routing → Aux Out: map Aux Out 1 = Bus 1 and Aux Out 2 = Bus 2; connect both outputs to the stereo IEM chain.
+- Keep sends Pre‑EQ; add gentle bus compression if desired; save Scene.
+
+Walkthrough (PC) — Drums Bus feeding P16
+- Pick Bus 6 for a “Drums” submix.
+- Press “Sends on Faders” for Bus 6; raise Kick/Snare/Tom/OH sends to taste; keep tap Pre‑EQ.
+- Routing → Ultranet: set a slot (e.g., Slot 4) Source = Bus 6, Tap = Pre‑EQ; label it “Drums”. Now P16 users get a single “Drums” knob while FOH keeps individual drum channels.
+- Save Scene.
+
 Step‑by‑step in X Air Edit (Mac)
 1) Global
 - Setup → Audio/MIDI → Sample Rate: 48 kHz.

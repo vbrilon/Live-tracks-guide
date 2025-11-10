@@ -29,6 +29,8 @@ Logic is excellent at preparing songs that didn’t start life as clean stems on
 - Arrangement clarity: Global Tracks and arrangement markers make it easy to place cues at precise musical moments.
 - Avoids MIDI tempo import pitfalls: Ableton does not reliably import tempo from MIDI; keeping timing authoritative in audio (click/cues) is safer live.
 
+New to tempo maps? See Tempo Maps 101: `docs/tempo-map-from-click.md`.
+
 Use Logic when
 - The source is a stereo mix/MP3 with drift or rubato.
 - You need tight musical cues or complex meter/tempo changes.
@@ -48,6 +50,11 @@ Skip Logic (Ableton‑only) when
 - Smart Tempo: choose Adapt; play/locate so Logic adapts to the audio.
 - Verify downbeats/tempo/time‑signature in Global Tracks; fix misalignments.
 - Add arrangement markers (Intro/Verse/Chorus/Bridge) on bar lines.
+
+Add a consistent count‑in (2 bars)
+- Recommended convention: place the song’s first musical downbeat at bar 3. Use bars 1–2 for click pre‑roll and an optional spoken count‑in (“1‑2‑3‑4”).
+- Ensure exports include bars 1–2 so every stem starts at bar 1. Click/Cues contain sound in bars 1–2; other stems are silence for those bars so everything lines up in Ableton Session.
+- Alternative: advanced bar offset/negative bars with bar‑1 at the musical downbeat—still export two bars of pre‑roll into every stem so Session playback starts with a count‑in.
 
 3) Build click and vocal cues
 - Create a click track (accent bar 1). You can print it as audio.

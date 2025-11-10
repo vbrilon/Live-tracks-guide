@@ -17,6 +17,7 @@ Tracks check
 
 Virtual soundcheck
 - With the band muted, play stems to set FOH and IEM balances safely.
+- For IEMs, use Sends‑on‑Faders on each Bus to mix the performer’s balance; keep Bus taps Pre‑EQ so FOH tweaks don’t shift their monitors.
 
 Show operation
 - Use Ableset or your footswitch to start/stop/advance scenes.
@@ -41,7 +42,7 @@ Quick reference
 - Instrument‑swappable (any instrument): keep the same channel number (e.g., Bass → 6, Guitar → 7, Keys → 12) and flip XR18 Source (Analog ↔ USB). Remove that instrument from stems to avoid doubles.
 - Drums preferred map: Kick 1, Snare 2, Tom 3, OH L 4, OH R 5; stereo fallback 4/5
 - Drum tracks (no live drummer): mono fallback 4; stereo fallback 4/5
-- IEM buses: 1–5 mono, Pre‑EQ; Aux Out 1–5 → IEM chain
+- IEMs: Either XR18 Buses (1–5, mono, Pre‑EQ; Aux Out 1–5 → IEM chain) or P16‑M over Ultranet (no Bus required for those players)
 - Safety: “Main LR” OFF on Click/Cues
 
 Gain staging & calibration (recommended)

@@ -14,6 +14,7 @@ Common issues
 - Missing bass/guitar when using backing: route Ableton to the live channel number (e.g., 6/7) and flip XR18 Source to USB.
 - Drum duplication: remove drums from `15–18` stems if also routing to `1–5`, or mute `1–5` when drum stems live in `15–18`.
 - Wrong channel after swapping live ↔ tracks: keep the same channel number for any instrument (e.g., Keys → 12). Route Ableton to that number and flip XR18 Source (Analog ↔ USB). Don’t move Ultranet slots when swapping.
+- IEM mix changes when FOH EQ/faders move: set Bus send taps to Pre‑EQ (or Pre‑Fader) for IEMs so FOH tweaks don’t alter monitor mixes. Use Sends‑on‑Faders to rebalance the Bus instead.
 
 If problems persist
 - Bypass Ableset and trigger Scenes directly in Ableton.

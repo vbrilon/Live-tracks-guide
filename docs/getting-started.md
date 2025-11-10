@@ -45,6 +45,10 @@ Screenshots to add
 - For each clip: open Clip View and turn Warp Off. Adjust clip Gain to taste.
 - Rename the Scene: `01 <SongName>`.
 
+Count‑in convention (recommended)
+- Standardize on a 2‑bar pre‑roll: Click/Cues files contain two bars of count‑in; other stems contain two bars of silence before the music starts. This ensures every Scene launch gives the band the same lead‑in before the song hits.
+- If your stems don’t include this yet, add the 2‑bar pre‑roll during prep in Logic or Reaper before exporting. See `docs/tracks-prep.md`.
+
 5) Add more songs (multi‑song set)
 - Repeat step 4 for each additional song: one Scene (row) per song using the same tracks.
 - Rename Scenes with leading numbers so they sort cleanly: `02 <Song2>`, `03 <Song3>`, etc.

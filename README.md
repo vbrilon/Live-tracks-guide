@@ -31,8 +31,20 @@ Quick reference
 - Safety: “Main LR” OFF on Click/Cues
  - IEM safety: taps Pre‑EQ; consider a gentle compressor/limiter on IEM buses
 
+Tempo maps (when/why)
+- For drift or meter/tempo changes, author cues/MIDI against a tempo map in Arrangement and then export cues to audio. In live Session playback, keep Warp Off and let the printed click/cues drive timing. Start here: `docs/tempo-map-from-click.md`.
+
+Count‑in convention
+- Standardize a 2‑bar pre‑roll on every song. Click/Cues contain the count‑in; other stems include two bars of silence. Add this during prep (Logic/Reaper) so scenes always launch with the same lead‑in.
+
 Ultranet tip
 - To save P16 slots, create a mono “Drums” submix on a free bus (e.g., Bus 6) and assign that bus to one Ultranet slot. Musicians get one drum knob while FOH retains individual drum channels.
+
+Buses 101
+- XR18 Buses are independent mixes used for IEMs, submixes, and streams. For IEMs, use Pre‑EQ taps, mix with “Sends on Faders,” and route Aux Out 1–5 to Bus 1–5. See the PC walkthroughs in: [X Air Routing](docs/xair-routing.md).
+
+Ultranet vs Buses (IEMs)
+- If a player uses a P16‑M over Ultranet, you don’t need a separate IEM Bus for them—their IEMs connect to the P16‑M. Keep Buses for anyone not on P16s or for special submixes.
 
 Break music (between sets)
 - macOS system audio plays on USB 1/2. Create two XR18 Scenes to flip ch 17/18 Source:

@@ -6,6 +6,10 @@ Summary: Map XR18 sources to Ultranet slots for P16‑M mixers, with options to 
 
 Ultranet carries 16 mono channels to personal mixers. Assign XR18 sources to Ultranet slots so each musician builds their own IEM mix without FOH changes affecting them.
 
+Important: P16‑M replaces XR18 IEM Buses for those users
+- When a musician uses a P16‑M, you don’t need to create a separate IEM Bus for them on the XR18. Their IEMs can plug directly into the P16‑M headphone output, or the P16‑M line out can feed a wireless transmitter.
+- Keep using XR18 IEM Buses for any players NOT on P16s (e.g., analog IEMs or wedges). Mixed setups (some P16, some Bus) work fine.
+
 How to assign
 - In X Air Edit: Routing → Ultranet.
 - For each slot 1–16: Source = DirOut Ch X (or Card/Bus as needed); Tap = Pre‑EQ.
@@ -35,6 +39,8 @@ Using a Bus to feed P16 (Drums Submix)
 - Set the bus Send Tap to Pre‑EQ if you don’t want FOH EQ/faders to affect the P16 submix, or Post‑EQ if you do.
 - Routing → Ultranet: assign an Ultranet slot (e.g., 4) to Source = Bus 6, Tap = Pre‑EQ. Label it “Drums”.
 - Result: P16 shows one channel for the entire drum kit; FOH still gets individual drum channels for mixing.
+
+New to Buses? See “Buses 101” in [X Air Routing](xair-routing.md) for concepts, tap choices, and “Sends on Faders” mixing.
 
 P16 / IEM enhancements
 - Presets per player: save each musician’s P16 mix as a preset so their balances survive power cycles. Label presets on tape for fast recall.

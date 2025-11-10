@@ -39,6 +39,10 @@ Consider Logic or Ableton‑only when
 - Place downbeat markers and adjust the tempo map, or use SWS/BR actions to warp grid to item transients.
 - Create a Region covering the song (Region/Marker Manager). Name it exactly as the song (e.g., `01 Run Away`).
 
+Add a consistent count‑in (2 bars)
+- Simple convention: set the first musical downbeat at bar 3. Use bars 1–2 for click pre‑roll and optional spoken count‑in.
+- Make sure each Region includes bars 1–2 so all rendered stems share the same two‑bar pre‑roll (click/cues audible; other stems silent).
+
 3) Build click and cues
 - Click: Insert → Click source on `13_Click` (follows the tempo map; set accent on bar 1).
 - Cues: Place/record spoken cue items on `14_Cues` aligned to bar markers.

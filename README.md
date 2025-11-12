@@ -16,6 +16,12 @@ Start here
 - Running the show: [Operation](docs/operation.md)
 - Troubleshooting: [Troubleshooting](docs/troubleshooting.md)
 
+Setup helpers
+- Bootstrap (macOS): `scripts/bootstrap-mac.sh` installs `ffmpeg`, `aubio`, and Python deps.
+- Tools overview: [Tools README](tools/README.md)
+- Templates: see `Assets/templates/` for placeholder Scene/DAW templates to replace.
+- Demo song: generate quick test assets without licensed audio: [Demo Song](docs/demo-song.md)
+
 Hardware & software checklist
 - Mac laptop with Ableton Live and Ableset
 - Logic Pro (for tempo map, click, cues)

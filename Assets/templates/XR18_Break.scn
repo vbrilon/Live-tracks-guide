@@ -1,0 +1,8 @@
+XR18 Scene Placeholder — Break Music
+
+Replace this file with your exported XR18 Scene.
+
+Intended settings
+- ch 17 Source = USB (Card 1); ch 18 Source = USB (Card 2)
+- ch 1/2 Source = Analog (or muted) to avoid duplicate USB 1/2
+- Return to Performance Scene before starting tracks

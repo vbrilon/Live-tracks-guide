@@ -4,6 +4,9 @@
 
 Summary: Recommended XR18 channel map, safe Source settings, IEM sends, and “Break Music” Scenes that flip USB 1/2 to ch 17/18 between sets.
 
+Versioning note
+- Keep XR18 firmware and X Air Edit up to date. Scenes saved on newer firmware may not import on significantly older versions. Export and version your Scenes in `Assets/templates/` so you can re‑load known‑good states.
+
 Recommended channel map
 - 1 Kick, 2 Snare, 3 Tom, 4 OH L, 5 OH R
 - 6 Bass DI, 7 Guitar

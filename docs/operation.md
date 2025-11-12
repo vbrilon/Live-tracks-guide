@@ -4,6 +4,19 @@
 
 Summary: Soundcheck and show‑time steps, safe break‑music Scenes, quick reference, and gain/IEM safety notes.
 
+Rehearsal prep checklist
+- Load XR18 Performance Scene; verify ch 13–18 Sources = USB; Main LR OFF on 13/14.
+- Open Ableton template: Click/Cues/Tracks 1–4 routed to Ext. Out 13–18; Warp Off for all audio; Global Quantization = 1 Bar.
+- Monitoring path: decide Buses (IEM) and/or P16‑M. For Buses, set send taps to Pre‑EQ and name/link buses as needed.
+- Count‑in convention: ensure a 2‑bar pre‑roll exists in Click/Cues; all other stems have 2 bars of silence.
+- Ableset remote: verify network reachability and footswitch mappings if used.
+
+Show‑day pre‑flight
+- USB connection solid; XR18 recognized by macOS/Windows.
+- Audio prefs: 48 kHz; 128–256 buffer.
+- Break Music Scene available and tested (USB 1/2 → ch 17/18).
+- Emergency: have stereo 17/18 mixdowns ready if stems fail.
+
 Power‑up and line check
 - Power order: XR18 → connect USB → launch Ableton/Ableset → load set.
 - Verify live mics/instruments (1–12).

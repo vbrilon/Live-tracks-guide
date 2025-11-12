@@ -1,0 +1,10 @@
+XR18 Scene Placeholder — Performance
+
+Replace this file with your exported XR18 Scene.
+
+Intended settings
+- Sample rate: 48 kHz
+- Source: ch 13–18 = USB (Card 13–18); ch 1–12 = Analog
+- Safety: Main LR OFF on ch 13 (Click) and 14 (Cues)
+- IEM: Bus taps Pre‑EQ; Aux Out 1–5 → Bus 1–5 (if using XR18 Buses)
+- Ultranet: assign slots per docs/ultranet-routing.md

@@ -20,6 +20,11 @@ Screenshots to add
 - Preferences → Audio (device, sample rate, buffer): `../Assets/img/screenshots/ableton-prefs-audio.png` (TODO add)
 - Output Config with Mono 1–18 enabled: `../Assets/img/screenshots/ableton-prefs-output-config.png` (TODO add)
 
+Windows specifics
+- Install and select the official `X‑AIR ASIO` driver in Ableton (Options → Preferences → Audio).
+- Device name may appear as `X‑AIR XR18 ASIO`. Enable outputs 1–18 in Output Config.
+- If using WASAPI/shared drivers, latency and channel exposure can vary; prefer ASIO for stable multichannel output.
+
 3) Prepare the set
 - Record/Warp/Launch tab: disable “Auto‑Warp Long Samples”.
 - In Session View (tab near top right), create these audio tracks:

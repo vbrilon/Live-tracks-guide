@@ -33,6 +33,15 @@ Terminology (assume no prior knowledge)
 - Tap point: where a send takes signal from a channel. Pre‑EQ means FOH EQ/fader won’t change the IEM feed.
 - DirOut Ch X: direct output of channel X (not a bus or the mains).
 
+Glossary (quick reference)
+- Scene (XR18): a saved snapshot of mixer state (channels, sources, buses, routing). Use at least two: Performance and Break Music.
+- Session vs Arrangement (Ableton): Session = clip grid for live playback; Arrangement = timeline for editing/authoring.
+- Warp (Ableton): time‑stretching. For live stems/click/cues, keep Warp Off.
+- Tempo map: tempo/time‑signature events (often `tempo.mid`) to align a DAW grid for authoring cues/MIDI.
+- Bus (XR18): independent mix (e.g., IEM). Each channel has a send level/tap to each Bus.
+- Ultranet: 16‑channel digital personal monitor feed to P16‑M mixers.
+- Region Render Matrix (Reaper): batch render many tracks across many regions with consistent naming.
+
 Helpful screenshots to capture
 - X Air Edit → Setup → Audio/MIDI with 48 kHz selected.
 - macOS Audio MIDI Setup showing the XR18 device present.

@@ -1,0 +1,7 @@
+Reaper .rpp Placeholder
+
+Replace with a real Reaper project containing:
+- Tracks named: 13_Click, 14_Cues, 15_TracksA, 16_TracksB, 17_TracksC, 18_TracksD
+- Optional dedicated: 06_Bass, 07_Guitar, 12_Keys, Master_Reference
+- Project sample rate: 48 kHz
+- Regions: one per song; Region Render Matrix preset for batch export
